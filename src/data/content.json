@@ -1,0 +1,378 @@
+{
+  "company": {
+    "name": "YantranshVT",
+    "logo": "YantranshVT",
+    "tagline": "Strategy | Technology | Talent Excellence",
+    "website": "www.YantranshVT.com",
+    "email": "inquiries@YantranshVT.com",
+    "locations": [
+      { "city": "New Jersey", "country": "USA", "flag": "🇺🇸" },
+      { "city": "London", "country": "UK", "flag": "🇬🇧" },
+      { "city": "Bangalore", "country": "India", "flag": "🇮🇳" },
+      { "city": "Singapore", "country": "Singapore", "flag": "🇸🇬" }
+    ]
+  },
+  "nav": {
+    "links": [
+      {
+        "label": "Industries",
+        "href": "#industries",
+        "submenu": [
+          { "label": "Telecom", "href": "#industries"},
+          { "label": "Banking & Financial Services", "href": "#industries" },
+          { "label": "Healthcare", "href": "#industries" },
+          { "label": "Life Sciences", "href": "#industries" }
+        ]
+      },
+      {
+        "label": "Services",
+        "href": "#services",
+        "submenu": [
+          { "label": "Data & AI Transformation", "href": "#services" },
+          { "label": "Product Engineering", "href": "#services" },
+          { "label": "Cloud & Infrastructure", "href": "#services" },
+          { "label": "Talent Solutions", "href": "#staffing" }
+        ]
+      },
+      { "label": "About", "href": "#about" },
+      { "label": "Tech Stack", "href": "#techstack" },
+      { "label": "Careers", "href": "#contact" }
+    ],
+    "cta": { "label": "Contact Us", "href": "#contact" }
+  },
+  "heroSlides": [
+    {
+      "label": "ROI from AI@Scale",
+      "headline": "Empowering Enterprises to Achieve ROI from AI Initiatives",
+      "description": "We leverage domain expertise, solutions capabilities, and an outcomes-based approach to unlock significant value from AI investments.",
+      "cta": { "label": "Explore Services", "href": "#services" },
+      "accent": "#00E0C3",
+      "img": "hero-ai.jpg"
+    },
+    {
+      "label": "Strategy to Execution",
+      "headline": "From Strategic Vision to Real-World Technology Delivery",
+      "description": "Bridging the gap between ambitious business goals and measurable digital transformation outcomes across four continents.",
+      "cta": { "label": "Learn More", "href": "#about" },
+      "accent": "#00B4D8",
+      "img": "hero-strategy.jpg"
+    },
+    {
+      "label": "Elite Talent",
+      "headline": "Pre-Vetted Specialists Across High-Demand Tech Stacks",
+      "description": "Accelerate projects with our Resource Augmentation model — full-stack engineers, cloud architects, data scientists, and more.",
+      "cta": { "label": "View Talent", "href": "#staffing" },
+      "accent": "#5CE1C5",
+      "img": "hero-talent.jpg"
+    }
+  ],
+  "about": {
+    "sectionLabel": "WHO WE ARE",
+    "headline": "Combining the strategic foresight of global consulting with the agile delivery of product engineering and elite talent solutions.",
+    "mission": {
+      "title": "Our Mission",
+      "text": "To empower global enterprises through \"Strategy-to-Execution\" frameworks, leveraging AI, data-led engineering, and high-performance talent to achieve measurable ROI."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "text": "To be the world's most trusted partner for digital evolution, where knowledge meets forthright execution to solve the most complex business challenges."
+    }
+  },
+  "identity": {
+    "sectionLabel": "OUR IDENTITY",
+    "headline": "Strategy Meets Capability",
+    "description": "We bridge the gap between ambitious business goals and real-world technology delivery. By integrating domain depth with engineering agility, we offer a complete 360-degree service model.",
+    "pillars": [
+      { "title": "Domain-Led Consulting", "desc": "Deep industry expertise driving strategic transformation roadmaps.", "icon": "globe" },
+      { "title": "Custom Software Engineering", "desc": "Building robust, scalable applications with engineering-first culture.", "icon": "code" },
+      { "title": "Global Talent Solutions", "desc": "Pre-vetted specialists deployed across high-demand technology stacks.", "icon": "users" }
+    ]
+  },
+  "services": [
+    {
+      "id": "data-ai",
+      "sectionLabel": "DATA & AI TRANSFORMATION",
+      "description": "We deliver AI & Data-driven solutions at scale, solving critical business challenges and unlocking growth through Agentic AI, Data Modernization, and Predictive ROI frameworks.",
+      "icon":"brain"
+    },
+    {
+      "id": "product-engineering",
+      "sectionLabel": "PRODUCT ENGINEERING",
+      "description": "We build robust, scalable custom applications using Java, Python, .NET and modern frameworks. Our Engineering-First culture ensures code quality, security, and scalability.",
+      "icon":"code"
+    },
+    {
+      "id": "cloud-infrastructure",
+      "sectionLabel": "CLOUD & INFRASTRUCTURE",
+      "description": "Certified expertise in AWS & Azure migration, 24/7 managed services, and DevSecOps — integrating security into CI/CD pipelines for rapid delivery.",
+      "icon":"cloud"
+    },
+    {
+      "id":"talent-sol",
+      "sectionLabel": "TALENT SOLUTIONS",
+      "description": "Pre-vetted specialists across high-demand tech stacks — full-stack engineers, cloud architects, data scientists, product managers, and cybersecurity experts.",
+      "icon": "users"
+    }
+  ],
+  "metrics": {
+    "sectionLabel": "WHY YANTRANSHVT",
+    "stats": [
+      { "value": "98%", "label": "Client Retention Rate" },
+      { "value": "50+", "label": "Fortune 500 Clients" },
+      { "value": "4", "label": "Continents Served" },
+      { "value": "24/7", "label": "Managed Support" }
+    ],
+    "headline": "Scaling Excellence",
+    "description": "Our growth is driven by the success of our clients. By combining top-tier strategic consulting with specialized delivery teams, we consistently outperform industry standards in delivery speed and quality."
+  },
+  "staffing": {
+    "sectionLabel": "TALENT SOLUTIONS",
+    "headline": "Elite Talent on Demand",
+    "description": "Accelerate your projects with our Resource Augmentation model, providing pre-vetted specialists across high-demand tech stacks.",
+    "roles": [
+      { "title": "Full-Stack Engineers", "stack": "Java, Python, JS" },
+      { "title": "Cloud Architects", "stack": "& SRE Experts" },
+      { "title": "Data Scientists", "stack": "& AI Engineers" },
+      { "title": "Product Managers", "stack": "& Program Managers" },
+      { "title": "QA & Automation", "stack": "Testing Specialists" },
+      { "title": "Cybersecurity", "stack": "Network & Security" }
+    ]
+  },
+  "journey": {
+    "sectionLabel": "THE TRANSFORMATION JOURNEY",
+    "steps": [
+      { "title": "Discover", "description": "Domain-led audit and objective setting.", "num": "01" },
+      { "title": "Strategize", "description": "AI & Data architecture roadmap.", "num": "02" },
+      { "title": "Engineer", "description": "Agile development & talent integration.", "num": "03" },
+      { "title": "Scale", "description": "Managed services & continuous ROI.", "num": "04" }
+    ]
+  },
+  "leadership": [
+    { "name": "Madhup Sharma", "title": "CEO & Founder", "quote": "The true value of technology is not in the tools themselves, but in the forthright knowledge of how to apply them to solve human and business problems.", "img": "MadhupLeadership.jpeg" },
+    { "name": "Krishan Pal", "title": "VP Engineering", "quote": "Future of IT industry lies in Human-AI collaboration—where technology augments human creativity to solve the world's most complex data challenges.", "img": "KrishanPalLeadership.jpeg" },
+    { "name": "Mahanthesh", "title": "Director", "quote": "Great leadership is about empowering teams to innovate and delivering excellence through collaboration and strategic vision.", "img": "MahantheshLeadership.png" }
+  ],
+  "verticals": [
+    { "id": "telecom", "sectionLabel": "TELECOM", "headline": "Next-Gen Connectivity", "description": "We help Telcos navigate the 5G transition by modernizing OSS/BSS platforms and automating customer experience journeys.", 
+    "features": ["5G Network Assurance", "AI-Led Customer Support", "Zero-Touch Provisioning"], 
+    "icon": "signal",
+    "img": "induustry-telecom.png"
+     },
+    { "id": "bfsi", "sectionLabel": "BFSI", "headline": "Future-Ready Finance", "description": "Transforming banking, financial services, and insurance through real-time payments, risk AI, and personalized wealth management.", 
+    "features": ["Fraud Detection & AML", "Digital Payments Core", "Algorithmic Trading Platforms"], 
+    "icon": "dollar",
+    "img": "banking-payments.png" },
+    { "id": "healthcare", "sectionLabel": "HEALTHCARE", "headline": "Patient-Centric Technology", "description": "Enhancing healthcare delivery through interoperable data platforms, AI diagnostics, and remote patient monitoring.", "features": ["Interoperable EHR Systems", "Telehealth & Virtual Care", "Clinical Decision Support"], "icon": "heart",
+                "img": "healthcare.png" },
+    { "id": "lifesciences", "sectionLabel": "LIFE SCIENCES", "headline": "Accelerating Discovery", "description": "Digitalizing the drug discovery pipeline and clinical trials through advanced data analytics and regulatory compliance tech.", "features": ["AI-Driven Drug Discovery", "Clinical Trial Automation", "Lab Informatics Modernization"], "icon": "flask",
+                "img": "life-science.png"
+    }
+  ],
+  "techStack": {
+    "sectionLabel": "TECHNOLOGY STACK",
+    "categories": [
+      { "title": "Backend", "technologies": ["Python", "Java (Spring)", ".NET Core", "Node.js"], "icon": "terminal" },
+      { "title": "Frontend", "technologies": ["React", "Angular", "Vue.js", "Swift", "Kotlin"], "icon": "layout" },
+      { "title": "Cloud & DevOps", "technologies": ["AWS", "Azure", "Docker", "Kubernetes", "Jenkins"], "icon": "cloud" }
+    ]
+  },
+  "partners": {
+    "sectionLabel": "OUR PARTNERS",
+    "description": "Our strong technology stack, digital expertise, and partnerships with leading technology companies enable us to deliver superior digital experiences.",
+    "logos": ["AWS", "Microsoft Azure", "Snowflake", "Databricks", "Salesforce", "ServiceNow", "Kubernetes", "Docker"]
+  },
+  "platforms": [
+    {
+      "name": "Agentic AI Platform",
+      "desc": "AI-driven autonomous problem discovery and root cause analysis with GenAI-assisted insights for enterprise decision-making.",
+      "features": ["Prebuilt Agent Marketplace", "Deep Domain Contextualization", "Agentic + Deterministic Workflows", "Enterprise-Grade Security"],
+      "img": "platform-ai.jpg"
+    },
+    {
+      "name": "Data Modernization Suite",
+      "desc": "Next-generation data modernization platform built to help enterprises accelerate their cloud journey and unlock full potential.",
+      "features": ["Unified Data Migration", "Intelligent Transformation", "Data Quality Framework", "Cloud-Native Architecture"],
+      "img": "platform-data.jpg"
+    },
+    {
+      "name": "Predictive Analytics Engine",
+      "desc": "Using proprietary frameworks to predict operational outcomes and maximize technology investment with measurable ROI.",
+      "features": ["North Star Metric Alignment", "Automated KPI Tracking", "Data-Insights-Actions Loop", "Real-time Dashboards"],
+      "img": "platform-analytics.jpg"
+    }
+  ],
+  "quote": {
+    "text": "The true value of technology is not in the tools themselves, but in the forthright knowledge of how to apply them to solve human and business problems.",
+    "author": "Leadership Team",
+    "company": "YantranshVT Global"
+  },
+  "globalPresence": {
+    "headline": "Global Scale.\nLocal Impact.",
+    "description": "Connecting elite technology talent and strategic innovation from New Jersey and London to Bangalore and Singapore."
+  },
+  "contact": {
+    "headline": "Ready for a Conversation?",
+    "tagline": "Let's build the future together — Strategy | Tech | Talent",
+    "website": "www.YantranshVT.com",
+    "email": "inquiries@YantranshVT.com"
+  },
+  "footer": {
+    "columns": [
+      { "title": "Industries", "links": [{ "label": "Telecom", "href": "#industries" }, { "label": "Banking & Financial Services", "href": "#industries" }, { "label": "Healthcare", "href": "#industries" }, { "label": "Life Sciences", "href": "#industries" }] },
+      { "title": "Services", "links": [{ "label": "Data & AI Transformation", "href": "#services" }, { "label": "Product Engineering", "href": "#services" }, { "label": "Cloud & Infrastructure", "href": "#services" }, { "label": "Talent Solutions", "href": "#staffing" }] },
+      { "title": "Company", "links": [{ "label": "About Us", "href": "#about" }, { "label": "Tech Stack", "href": "#techstack" }, { "label": "Partners", "href": "#partners" }, { "label": "Contact", "href": "#contact" }] }
+    ]
+  },
+  "pages": {
+    "telecom": {
+      "category": "Industries",
+      "title": "Telecom",
+      "subtitle": "Accelerating Telecom Excellence",
+      "heroDescription": "In the rapidly evolving telecom sector, staying ahead requires a perfect harmony of operational speed and world-class customer engagement. At Yantransh, we empower service providers to bridge this gap through our proprietary AI@Tele framework. By integrating digital-native engineering with deep industry insights, we help telcos unlock the true power of their network infrastructure.",
+      "image": "induustry-telecom.png",
+      "introText": "Our approach is designed to deliver measurable impact across four key pillars:",
+      "offerings": [
+        { "title": "Digital Experience Transformation", "description": "Revolutionizing how customers interact with your brand across every digital touchpoint." },
+        { "title": "AI-Driven Network Intelligence", "description": "Leveraging predictive analytics to optimize network performance and reliability." },
+        { "title": "Technology Modernization", "description": "Transitioning legacy systems into agile, cloud-ready architectures built for the future." },
+        { "title": "GenAI-Led Automation", "description": "Deploying cutting-edge generative AI to streamline complex workflows and reduce operational overhead." }
+      ],
+      "ctaText": "Whether it's enhancing connectivity or hyper-personalizing the user journey, we turn technological potential into business reality. We don't just upgrade your systems; we modernize your entire value proposition for a data-driven world.",
+      "ctaButton": "Reach Out Today",
+      "backLink": "#/industries",
+      "backLabel": "Back to Industries"
+    },
+    "banking": {
+      "category": "Industries",
+      "title": "Banking & Payments",
+      "subtitle": "Modernizing the Future of Banking",
+      "heroDescription": "The banking landscape is undergoing a radical shift, driven by the dual demand for frictionless customer journeys and leaner operational costs. To maintain a competitive edge, financial institutions must master the convergence of business strategy and technological agility. At Yantransh, we facilitate this evolution by focusing on critical strategic pivots.",
+      "image": "banking-payments.png",
+      "introText": "We specialize in creating a fully integrated digital ecosystem that empowers your organization to thrive:",
+      "offerings": [
+        { "title": "Digital Platform Acceleration", "description": "We help banks rapidly adopt and scale digital-first platforms that meet the high-speed expectations of modern consumers." },
+        { "title": "Data Products at Scale", "description": "Our approach integrates intelligent data solutions directly into core banking workflows, optimizing everything from the front office to back-end processing." },
+        { "title": "Operational Efficiency", "description": "By automating legacy manual tasks, we significantly reduce the cost-to-serve while improving accuracy and compliance." },
+        { "title": "Hyper-Personalization", "description": "Leveraging deep analytics, we enable banks to deliver tailored financial services that resonate with individual user needs." },
+        { "title": "Resilient Infrastructure", "description": "Our engineering expertise ensures that your digital transformation is built on a secure, scalable, and future-proof foundation." }
+      ],
+      "ctaText": "By bridging the gap between legacy systems and emerging technologies, we turn banking complexity into a streamlined competitive advantage. Let us help you redefine your value proposition and deliver the seamless experiences your customers demand.",
+      "ctaButton": "Get in Touch",
+      "backLink": "#/industries",
+      "backLabel": "Back to Industries"
+    },
+    "healthcare": {
+      "category": "Industries",
+      "title": "Healthcare",
+      "subtitle": "Transforming Healthcare Through Digital Innovation",
+      "heroDescription": "In a landscape defined by value-based care and evolving regulatory demands, healthcare organizations must embrace digital agility to thrive. At Yantransh, we combine deep clinical insights with advanced technology to bridge the gap between patient needs and operational performance. Our mission is to empower providers and payers to navigate an AI-first world with confidence and precision.",
+      "image": "healthcare.png",
+      "introText": "We provide a comprehensive suite of solutions designed to address the unique challenges of the modern healthcare landscape:",
+      "offerings": [
+        { "title": "Interoperable Data Ecosystems", "description": "Breaking down information silos to ensure seamless data flow across the entire care continuum." },
+        { "title": "AI-Enhanced Care Management", "description": "Utilizing predictive analytics to identify high-risk populations and personalize intervention strategies." },
+        { "title": "Optimized Provider Workflows", "description": "Reducing administrative burden through intelligent automation, allowing clinicians to focus on patient care." },
+        { "title": "Digital Patient Engagement", "description": "Building intuitive platforms that empower patients to take control of their health journeys." },
+        { "title": "Revenue Cycle Excellence", "description": "Leveraging AI to streamline claims processing, reduce denials, and improve financial health." }
+      ],
+      "ctaText": "We transform complex healthcare challenges into sustainable competitive advantages by prioritizing both efficiency and empathy. Our solutions don't just modernize technology; they enhance the quality of life for patients and the professionals who serve them. Partner with Yantransh to build a more connected, data-driven, and resilient healthcare future.",
+      "ctaButton": "Start Your Transformation",
+      "backLink": "#/industries",
+      "backLabel": "Back to Industries"
+    },
+    "lifesciences": {
+      "category": "Industries",
+      "title": "Life Sciences",
+      "subtitle": "Pioneering AI-Driven Life Sciences",
+      "heroDescription": "In an era defined by data, Yantransh empowers Life Sciences organizations to lead through a sophisticated blend of domain mastery and AI innovation. We bridge the gap between complex biological data and actionable intelligence to catalyze scientific and commercial breakthroughs. By integrating cutting-edge AI at every stage of the value chain, we help our partners navigate an increasingly outcomes-focused global ecosystem.",
+      "image": "life-science.png",
+      "introText": "Our solutions are designed to accelerate your journey from discovery to delivery:",
+      "offerings": [
+        { "title": "Clinical Trial Acceleration", "description": "Streamlining study timelines and optimizing site selection through predictive modeling." },
+        { "title": "Patient-Centered Platforms", "description": "Crafting digital experiences that enhance engagement, adherence, and long-term health outcomes." },
+        { "title": "Operational Excellence", "description": "Modernizing legacy processes with intelligent automation to drive significant cost efficiencies." },
+        { "title": "Commercial Growth & Intelligence", "description": "Leveraging market analytics to sharpen competitive positioning and accelerate product adoption." }
+      ],
+      "ctaText": "We transform fragmented data into a sustainable competitive advantage, ensuring your organization makes faster, smarter decisions. At Yantransh, we don't just optimize workflows; we help you redefine what's possible for patient care and business performance. Together, we can accelerate the journey from laboratory discovery to life-changing patient impact.",
+      "ctaButton": "Partner With Us",
+      "backLink": "#/industries",
+      "backLabel": "Back to Industries"
+    },
+    "data-ai": {
+      "category": "Services",
+      "title": "Data & AI",
+      "subtitle": "Unlocking Value Through Data & AI Intelligence",
+      "heroDescription": "In the modern enterprise, data is no longer just an asset—it is the engine of competitive differentiation. At Yantransh, we help organizations transition from fragmented data silos to an AI-first mindset, ensuring that every insight leads to a decisive action. Our comprehensive suite of Data and AI services is designed to turn complex information into a scalable business advantage.",
+      "image": "data-ai.png",
+      "introText": "We empower organizations to transcend traditional data barriers and harness the transformative power of artificial intelligence:",
+      "offerings": [
+        { "title": "AI@Scale Strategy", "description": "Implementing robust frameworks that move AI from experimental pilots to core business operations." },
+        { "title": "Modern Data Engineering", "description": "Designing agile, cloud-native data architectures that ensure high-quality, real-time data availability." },
+        { "title": "Generative AI & Automation", "description": "Deploying cutting-edge LLMs and automation tools to revolutionize productivity and creative workflows." },
+        { "title": "Advanced Analytics & Insights", "description": "Leveraging predictive and prescriptive modeling to solve complex business problems and forecast trends." },
+        { "title": "Data Governance & Trust", "description": "Establishing rigorous security and compliance standards to ensure your AI initiatives are ethical and resilient." }
+      ],
+      "ctaText": "By harmonizing deep engineering expertise with industry-specific context, we bridge the gap between raw data and transformative business outcomes. Our approach doesn't just build models; it builds a culture of data-driven excellence. Partner with Yantransh to harness the full power of your information and lead the next wave of industrial innovation.",
+      "ctaButton": "Explore Data & AI Solutions",
+      "backLink": "#/services",
+      "backLabel": "Back to Services"
+    },
+    "product-engineering": {
+      "category": "Services",
+      "title": "Product Engineering",
+      "subtitle": "Engineering the Next Generation of Digital Products",
+      "heroDescription": "In a world where software is the primary driver of business value, velocity and reliability are non-negotiable. At Yantransh, our Product Engineering services help organizations transition from legacy mindsets to digital-native powerhouses. We combine design thinking with disciplined engineering to build scalable, high-performance products that resonate with users and endure in the marketplace.",
+      "image": "product-engineering.png",
+      "introText": "Our product engineering services are built to transform your digital vision into market-leading reality:",
+      "offerings": [
+        { "title": "Agile Product Development", "description": "Accelerating time-to-market through lean methodologies and continuous delivery pipelines." },
+        { "title": "Cloud-Native Architecture", "description": "Building resilient, scalable systems designed to thrive in multi-cloud environments." },
+        { "title": "Modernization & Refactoring", "description": "Transforming monolithic legacy applications into agile, modular service architectures." },
+        { "title": "UX/UI Design Innovation", "description": "Crafting intuitive, human-centric interfaces that drive adoption and customer loyalty." },
+        { "title": "Quality Engineering", "description": "Integrating automated testing and proactive monitoring to ensure uncompromising security and performance." }
+      ],
+      "ctaText": "By bridging the gap between visionary ideas and robust technical execution, we ensure your digital products are built for today and ready for tomorrow. We don't just write code; we engineer competitive advantages that allow your business to scale at the speed of thought. Partner with Yantransh to turn your most ambitious product concepts into reality.",
+      "ctaButton": "Build With Us",
+      "backLink": "#/services",
+      "backLabel": "Back to Services"
+    },
+    "cloud-infrastructure": {
+      "category": "Services",
+      "title": "Cloud & Infrastructure",
+      "subtitle": "Empowering Business with Resilient Cloud & Infrastructure",
+      "heroDescription": "In today's hyper-connected economy, a robust digital backbone is the prerequisite for innovation and scale. At Yantransh, we help enterprises navigate the complexities of hybrid and multi-cloud environments, ensuring your infrastructure is as agile as your business strategy. Our services bridge the gap between traditional hardware and future-ready, software-defined ecosystems.",
+      "image": "cloud-infrastructure.png",
+      "introText": "We provide end-to-end cloud and infrastructure services that power digital transformation:",
+      "offerings": [
+        { "title": "Cloud Migration & Strategy", "description": "Seamlessly transitioning workloads to the cloud while minimizing downtime and maximizing ROI." },
+        { "title": "Cloud-Native Operations", "description": "Optimizing environments with serverless architectures and containerization for peak efficiency." },
+        { "title": "Next-Gen Infrastructure Management", "description": "Leveraging AI and automation to proactively monitor and manage system health." },
+        { "title": "Cybersecurity & Resilience", "description": "Implementing Zero Trust frameworks and robust recovery protocols to protect your most critical assets." },
+        { "title": "FinOps & Cost Optimization", "description": "Providing granular visibility into cloud spend to ensure every dollar invested drives business value." }
+      ],
+      "ctaText": "By harmonizing security, scalability, and speed, we turn infrastructure from a cost center into a strategic differentiator. Our engineering-first approach ensures your systems are not just stable, but are built to support the next generation of digital breakthroughs. Partner with Yantransh to build a foundation that is secure by design and scalable by demand.",
+      "ctaButton": "Modernize Your Infrastructure",
+      "backLink": "#/services",
+      "backLabel": "Back to Services"
+    },
+    "talent-solutions": {
+      "category": "Services",
+      "title": "Talent Solutions",
+      "subtitle": "Bridging the Talent Gap with Strategic Expertise",
+      "heroDescription": "In a rapidly shifting technological landscape, the right talent is the ultimate catalyst for innovation. At Yantransh, our Talent Solutions are designed to help organizations overcome the complexities of the modern workforce by connecting them with high-caliber, specialized expertise. We bridge the gap between ambitious business goals and the skilled professionals required to execute them with precision.",
+      "image": "talent-solutions.png",
+      "introText": "Our talent solutions are designed to provide you with the strategic workforce capabilities needed to excel:",
+      "offerings": [
+        { "title": "Niche Technical Expertise", "description": "Accessing a deep pool of specialists in AI, Data Engineering, Cloud, and Cybersecurity." },
+        { "title": "Agile Staff Augmentation", "description": "Quickly scaling your teams with the right skills to meet fluctuating project demands." },
+        { "title": "Strategic Managed Services", "description": "Delivering end-to-end talent management that aligns with your specific operational culture." },
+        { "title": "Domain-Specific Hiring", "description": "Leveraging our deep industry knowledge in Finance, Healthcare, and Telecom to find the perfect fit." },
+        { "title": "Future-Ready Upskilling", "description": "Ensuring your workforce remains competitive through continuous learning and technical evolution." }
+      ],
+      "ctaText": "By harmonizing recruitment speed with quality, we ensure your projects are powered by people who understand both the technology and your business. We don't just fill roles; we build the high-performing teams that drive long-term digital success. Partner with Yantransh to secure the intellectual capital your organization needs to lead in an AI-first world.",
+      "ctaButton": "Find Talent Now",
+      "backLink": "#/services",
+      "backLabel": "Back to Services"
+    }
+  }
+}
