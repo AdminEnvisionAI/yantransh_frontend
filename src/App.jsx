@@ -86,7 +86,8 @@ const C = (() => {
     title: svc.sectionLabel,
     desc: svc.description,
     icon: svc.icon,
-    img: getImage(svc.img)
+    img: getImage(svc.img),
+    href: svc.id ? `#/services/${svc.id}` : "#contact"
   }));
   }
   
@@ -148,6 +149,7 @@ const Navbar = ({ isDetailPage }) => {
   const [sc, setSc] = useState(false);
   const [mob, setMob] = useState(false);
   const [sub, setSub] = useState(null);
+  const [openMobSub, setOpenMobSub] = useState(null);
   useEffect(() => { const h = () => setSc(window.scrollY > 20); window.addEventListener("scroll", h); return () => window.removeEventListener("scroll", h); }, []);
   const links = [
     { l: "Industries", h: "#industries", s: ["Telecom", "Banking & Payments", "Healthcare", "Life Sciences"], subLinks: [
@@ -156,7 +158,11 @@ const Navbar = ({ isDetailPage }) => {
       { label: "Healthcare", href: "#/industries/healthcare" },
       { label: "Life Sciences", href: "#/industries/lifesciences" }
     ]},
-    { l: "Platforms", h: "#platforms", s: ["Agentic AI Platform", "Data Modernization Suite", "Predictive Analytics"] },
+    { l: "Platforms", h: "#platforms", s: ["Agentic AI Platform", "Data Modernization Suite", "Predictive Analytics Engine"], subLinks: [
+      { label: "Agentic AI Platform", href: "#platforms-0" },
+      { label: "Data Modernization Suite", href: "#platforms-1" },
+      { label: "Predictive Analytics Engine", href: "#platforms-2" }
+    ] },
     { l: "Services", h: "#services", s: ["Data & AI", "Product Engineering", "Cloud & Infrastructure", "Talent Solutions"], subLinks: [
       { label: "Data & AI", href: "#/services/data-ai" },
       { label: "Product Engineering", href: "#/services/product-engineering" },
@@ -184,7 +190,10 @@ const Navbar = ({ isDetailPage }) => {
         <div className="dn" style={{ display: "flex", gap: 0, alignItems: "center" }}>
           {links.map(lk => (
             <div key={lk.l} style={{ position: "relative" }} onMouseEnter={() => lk.s && setSub(lk.l)} onMouseLeave={() => setSub(null)}>
-              <a href={lk.h} style={{ padding: "8px 12px", color: T.txt, fontSize: 14, fontFamily: T.fn, textDecoration: "none", fontWeight: 600, display: "flex", alignItems: "center", gap: 3, transition: "color 0.2s" }}
+              <a
+                href={lk.subLinks ? "#" : lk.h}
+                onClick={e => lk.subLinks && e.preventDefault()}
+                style={{ padding: "8px 12px", color: T.txt, fontSize: 14, fontFamily: T.fn, textDecoration: "none", fontWeight: 600, display: "flex", alignItems: "center", gap: 3, transition: "color 0.2s", cursor: "pointer" }}
                 onMouseEnter={e => e.currentTarget.style.color = T.blue} onMouseLeave={e => e.currentTarget.style.color = T.txt}>
                 {lk.l}{lk.s && <Icon name="chevDown" size={12} />}
               </a>
@@ -201,8 +210,17 @@ const Navbar = ({ isDetailPage }) => {
       {mob && <div style={{ padding: "8px 24px 20px", background: T.white, borderTop: `1px solid ${T.bdr}` }}>
         {links.map(lk => (
           <div key={lk.l}>
-            <a href={isDetailPage ? "/" + lk.h : lk.h} onClick={() => setMob(false)} style={{ display: "block", padding: "11px 0", color: T.txt, fontFamily: T.fn, fontSize: 15, fontWeight: 600, textDecoration: "none", borderBottom: `1px solid ${T.bdrL}` }}>{lk.l}</a>
-            {lk.subLinks && (
+            {lk.subLinks ? (
+              <button
+                type="button"
+                onClick={() => setOpenMobSub(openMobSub === lk.l ? null : lk.l)}
+                style={{ display: "block", width: "100%", padding: "11px 0", color: T.txt, fontFamily: T.fn, fontSize: 15, fontWeight: 600, textAlign: "left", background: "none", border: "none", cursor: "pointer", borderBottom: `1px solid ${T.bdrL}` }}>
+                {lk.l}
+              </button>
+            ) : (
+              <a href={lk.h} onClick={() => setMob(false)} style={{ display: "block", padding: "11px 0", color: T.txt, fontFamily: T.fn, fontSize: 15, fontWeight: 600, textDecoration: "none", borderBottom: `1px solid ${T.bdrL}` }}>{lk.l}</a>
+            )}
+            {lk.subLinks && openMobSub === lk.l && (
               <div style={{ paddingLeft: 16 }}>
                 {lk.subLinks.map(sub => (
                   <a key={sub.label} href={sub.href} onClick={() => setMob(false)} style={{ display: "block", padding: "8px 0", color: T.txtS, fontFamily: T.fn, fontSize: 13, textDecoration: "none" }}>{sub.label}</a>
@@ -300,7 +318,7 @@ const Services = () => {
                   <div style={{ maxHeight: open === i ? 140 : 0, overflow: "hidden", transition: "max-height 0.4s ease" }}>
                     <div style={{ padding: "0 0 18px 54px" }}>
                       <p style={{ fontFamily: T.fn, fontSize: 14, color: T.txtS, lineHeight: 1.7 }}>{svc.desc}</p>
-                      <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: 10, fontFamily: T.fn, fontSize: 13, fontWeight: 700, color: T.blue, textDecoration: "none" }}>Learn More <Icon name="arrow" size={13} /></a>
+                      <a href={svc.href || "#contact"} style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: 10, fontFamily: T.fn, fontSize: 13, fontWeight: 700, color: T.blue, textDecoration: "none" }}>Learn More <Icon name="arrow" size={13} /></a>
                     </div>
                   </div>
                 </div>
@@ -325,6 +343,30 @@ const Services = () => {
 const Platforms = () => {
   const [tab, setTab] = useState(0);
   const p = C.platforms[tab];
+
+  useEffect(() => {
+    const match = window.location.hash.match(/^#platforms-(\d)$/);
+    if (match) {
+      const idx = parseInt(match[1], 10);
+      if (idx >= 0 && idx < C.platforms.length) {
+        setTab(idx);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const match = window.location.hash.match(/^#platforms-(\d)$/);
+      if (match) {
+        const idx = parseInt(match[1], 10);
+        if (idx >= 0 && idx < C.platforms.length) {
+          setTab(idx);
+        }
+      }
+    };
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
   return (
     <section id="platforms" style={{ padding: "70px 0 80px", background: T.white }}>
       <W>
@@ -868,12 +910,29 @@ export default function App() {
   const isDetailPage = pageMap[currentHash] !== undefined;
   
   useEffect(() => {
-    // Only scroll to top when transitioning between detail page and homepage
+    // Only scroll to top when transitioning between detail page and homepage without a target anchor.
     if (prevIsDetailPage !== isDetailPage) {
-      window.scrollTo(0, 0);
+      if (isDetailPage || !currentHash || currentHash === "#") {
+        window.scrollTo(0, 0);
+      }
       setPrevIsDetailPage(isDetailPage);
     }
-  }, [isDetailPage, prevIsDetailPage]);
+  }, [isDetailPage, prevIsDetailPage, currentHash]);
+
+  useEffect(() => {
+    if (!isDetailPage && currentHash && currentHash !== "#" && !currentHash.startsWith("#/")) {
+      let targetId = currentHash.slice(1);
+      if (/^platforms-\d$/.test(targetId)) {
+        targetId = "platforms";
+      }
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        requestAnimationFrame(() => {
+          targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      }
+    }
+  }, [currentHash, isDetailPage]);
   
   return (
     <div style={{ background: T.white }}>
