@@ -1,4 +1,5 @@
 import { T, Rv, W, svgProps } from "../theme";
+import { getImage } from "../lib/images";
 import contentData from "../data/content.json";
 
 const sp = svgProps;
@@ -7,14 +8,9 @@ const IC = {
   check: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>,
 };
 
-// Image mapping
-const imageMap = {
-  "induustry-telecom.png": new URL("../assets/induustry-telecom.png", import.meta.url).href,
-};
-
 const Telecom = () => {
   const page = contentData.pages?.telecom || {};
-  const img = imageMap[page.image] || page.image;
+  const img = getImage(page.image);
 
   return (
     <div style={{ minHeight: "100vh", background: T.white }}>
@@ -24,11 +20,6 @@ const Telecom = () => {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg, rgba(11,29,58,0.95) 0%, rgba(11,29,58,0.8) 100%)" }} />
         
         <W style={{ position: "relative", zIndex: 2, paddingTop: 80, paddingBottom: 60 }}>
-          <Rv>
-            <a href={page.backLink || "/#industries"} style={{ display: "inline-flex", alignItems: "center", gap: 6, color: "rgba(255,255,255,0.7)", fontFamily: T.fn, fontSize: 13, textDecoration: "none", marginBottom: 24 }}>
-              <span style={{ transform: "rotate(180deg)", display: "inline-flex" }}>{IC.arrow}</span> {page.backLabel || "Back to Industries"}
-            </a>
-          </Rv>
           <Rv d={0.1}>
             <span style={{ fontFamily: T.fn, fontSize: 13, fontWeight: 600, color: T.blue, letterSpacing: 1, textTransform: "uppercase" }}>{page.category || "Industries"}</span>
           </Rv>
