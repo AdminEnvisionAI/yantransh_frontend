@@ -1,6 +1,7 @@
 {
   "company": {
     "name": "YantranshVT",
+    "logoImg": "logo.png",
     "logo": "YantranshVT",
     "tagline": "Strategy | Technology | Talent Excellence",
     "website": "www.YantranshVT.com",
@@ -31,7 +32,7 @@
           { "label": "Data & AI Transformation", "href": "#services" },
           { "label": "Product Engineering", "href": "#services" },
           { "label": "Cloud & Infrastructure", "href": "#services" },
-          { "label": "Talent Solutions", "href": "#staffing" }
+          { "label": "Talent Solutions", "href": "#/services/talent-solutions" }
         ]
       },
       { "label": "About", "href": "#about" },
@@ -61,7 +62,7 @@
       "label": "Elite Talent",
       "headline": "Pre-Vetted Specialists Across High-Demand Tech Stacks",
       "description": "Accelerate projects with our Resource Augmentation model — full-stack engineers, cloud architects, data scientists, and more.",
-      "cta": { "label": "View Talent", "href": "#staffing" },
+      "cta": { "label": "View Talent", "href": "#/services/talent-solutions" },
       "accent": "#5CE1C5",
       "img": "hero-talent.jpg"
     }
@@ -76,7 +77,8 @@
     "vision": {
       "title": "Our Vision",
       "text": "To be the world's most trusted partner for digital evolution, where knowledge meets forthright execution to solve the most complex business challenges."
-    }
+    },
+    "img": "about.jpg"
   },
   "identity": {
     "sectionLabel": "OUR IDENTITY",
@@ -93,25 +95,29 @@
       "id": "data-ai",
       "sectionLabel": "DATA & AI TRANSFORMATION",
       "description": "We deliver AI & Data-driven solutions at scale, solving critical business challenges and unlocking growth through Agentic AI, Data Modernization, and Predictive ROI frameworks.",
-      "icon":"brain"
+      "icon":"brain",
+      "img": "data-ai.jpg"
     },
     {
       "id": "product-engineering",
       "sectionLabel": "PRODUCT ENGINEERING",
       "description": "We build robust, scalable custom applications using Java, Python, .NET and modern frameworks. Our Engineering-First culture ensures code quality, security, and scalability.",
-      "icon":"code"
+      "icon":"code",
+      "img": "product-engineering.png"
     },
     {
       "id": "cloud-infrastructure",
       "sectionLabel": "CLOUD & INFRASTRUCTURE",
       "description": "Certified expertise in AWS & Azure migration, 24/7 managed services, and DevSecOps — integrating security into CI/CD pipelines for rapid delivery.",
-      "icon":"cloud"
+      "icon":"cloud",
+      "img": "cloud-infrastructure.png"
     },
     {
       "id":"talent-sol",
       "sectionLabel": "TALENT SOLUTIONS",
       "description": "Pre-vetted specialists across high-demand tech stacks — full-stack engineers, cloud architects, data scientists, product managers, and cybersecurity experts.",
-      "icon": "users"
+      "icon": "users",
+      "img": "talent-solutions.png"
     }
   ],
   "metrics": {
@@ -156,16 +162,16 @@
     { "id": "telecom", "sectionLabel": "TELECOM", "headline": "Next-Gen Connectivity", "description": "We help Telcos navigate the 5G transition by modernizing OSS/BSS platforms and automating customer experience journeys.", 
     "features": ["5G Network Assurance", "AI-Led Customer Support", "Zero-Touch Provisioning"], 
     "icon": "signal",
-    "img": "induustry-telecom.png"
+    "img": "telecom.jpg"
      },
     { "id": "bfsi", "sectionLabel": "BFSI", "headline": "Future-Ready Finance", "description": "Transforming banking, financial services, and insurance through real-time payments, risk AI, and personalized wealth management.", 
     "features": ["Fraud Detection & AML", "Digital Payments Core", "Algorithmic Trading Platforms"], 
     "icon": "dollar",
-    "img": "banking-payments.png" },
+    "img": "banking.jpg" },
     { "id": "healthcare", "sectionLabel": "HEALTHCARE", "headline": "Patient-Centric Technology", "description": "Enhancing healthcare delivery through interoperable data platforms, AI diagnostics, and remote patient monitoring.", "features": ["Interoperable EHR Systems", "Telehealth & Virtual Care", "Clinical Decision Support"], "icon": "heart",
-                "img": "healthcare.png" },
+                "img": "healthcare.jpg" },
     { "id": "lifesciences", "sectionLabel": "LIFE SCIENCES", "headline": "Accelerating Discovery", "description": "Digitalizing the drug discovery pipeline and clinical trials through advanced data analytics and regulatory compliance tech.", "features": ["AI-Driven Drug Discovery", "Clinical Trial Automation", "Lab Informatics Modernization"], "icon": "flask",
-                "img": "life-science.png"
+                "img": "lifesciences.jpg"
     }
   ],
   "techStack": {
@@ -218,9 +224,9 @@
   },
   "footer": {
     "columns": [
-      { "title": "Industries", "links": [{ "label": "Telecom", "href": "#industries" }, { "label": "Banking & Financial Services", "href": "#industries" }, { "label": "Healthcare", "href": "#industries" }, { "label": "Life Sciences", "href": "#industries" }] },
-      { "title": "Services", "links": [{ "label": "Data & AI Transformation", "href": "#services" }, { "label": "Product Engineering", "href": "#services" }, { "label": "Cloud & Infrastructure", "href": "#services" }, { "label": "Talent Solutions", "href": "#staffing" }] },
-      { "title": "Company", "links": [{ "label": "About Us", "href": "#about" }, { "label": "Tech Stack", "href": "#techstack" }, { "label": "Partners", "href": "#partners" }, { "label": "Contact", "href": "#contact" }] }
+      { "title": "Industries", "links": [{ "label": "Telecom", "href": "#/industries/telecom" }, { "label": "Banking & Financial Services", "href": "#/industries/banking" }, { "label": "Healthcare", "href": "#/industries/healthcare" }, { "label": "Life Sciences", "href": "#/industries/lifesciences" }] },
+      { "title": "Services", "links": [{ "label": "Data & AI Transformation", "href": "#/services/data-ai" }, { "label": "Product Engineering", "href": "#/services/product-engineering" }, { "label": "Cloud & Infrastructure", "href": "#/services/cloud-infrastructure" }, { "label": "Talent Solutions", "href": "#/services/talent-solutions" }] },
+      { "title": "Company", "links": [{ "label": "About Us", "href": "/#about" }, { "label": "Leadership", "href": "/#leadership" }, { "label": "Partners", "href": "/#partners" }, { "label": "Contact", "href": "/#contact" }] }
     ]
   },
   "pages": {

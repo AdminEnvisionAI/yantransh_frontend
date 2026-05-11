@@ -1,45 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import logo from "./assets/logo.png";
-import leadershipImage from "./assets/MadhupLeadership.jpeg";
-import krishanImage from "./assets/KrishanPalLeadership.jpeg";
-import mahantheshImage from "./assets/MahantheshLeadership.png";
-
-// Hero images
-import heroAi from "./assets/hero-ai.jpg";
-import heroStrategy from "./assets/hero-strategy.jpg";
-import heroTalent from "./assets/hero-talent.jpg";
-
-// Industry images (Unsplash)
-import telecomImg from "./assets/telecom.jpg";
-import bankingImg from "./assets/banking.jpg";
-import healthcareImg from "./assets/healthcare.jpg";
-import lifesciencesImg from "./assets/lifesciences.jpg";
-
-// Industry images (Custom)
-import telecomCustomImg from "./assets/induustry-telecom.png";
-import bankingPaymentsImg from "./assets/banking-payments.png";
-import healthcareCustomImg from "./assets/healthcare.png";
-import lifeScienceImg from "./assets/life-science.png";
-
-// Platform images
-import platformAi from "./assets/platform-ai.jpg";
-import platformData from "./assets/platform-data.jpg";
-import platformAnalytics from "./assets/platform-analytics.jpg";
-
-// About image
-import aboutImg from "./assets/about.jpg";
-
-// Service images (Unsplash)
-import dataAiImg from "./assets/data-ai.jpg";
-import productEngineeringImg from "./assets/product-engineering.jpg";
-import cloudInfrastructureImg from "./assets/cloud-infrastructure.jpg";
-import talentSolutionsImg from "./assets/talent-solutions.jpg";
-
-// Service images (Custom)
-import dataAiCustomImg from "./assets/data-ai.png";
-import productEngineeringCustomImg from "./assets/product-engineering.png";
-import cloudInfrastructureCustomImg from "./assets/cloud-infrastructure.png";
-import talentSolutionsCustomImg from "./assets/talent-solutions.png";
+import { getImage } from "./lib/images";
 
 import { T, EMAILS, formUi, buildMailto, footerHref, svgProps, getButtonStyles, getCircularImageStyles, getCircularImageBackgroundStyles, getCircularImageInnerStyles } from "./theme";
 import contentData from "./data/content.json";
@@ -54,43 +14,6 @@ import ProductEngineering from "./pages/ProductEngineering";
 import CloudInfrastructure from "./pages/CloudInfrastructure";
 import TalentSolutions from "./pages/TalentSolutions";
 
-/* ═══════════════ IMAGE IMPORTS FOR CONTENT ═══════════════ */
-const imageMap = {
-  "MadhupLeadership.jpeg": leadershipImage,
-  "KrishanPalLeadership.jpeg": krishanImage,
-  "MahantheshLeadership.png": mahantheshImage,
-  // Hero images
-  "hero-ai.jpg": heroAi,
-  "hero-strategy.jpg": heroStrategy,
-  "hero-talent.jpg": heroTalent,
-  // Industry images (Unsplash)
-  "telecom.jpg": telecomImg,
-  "banking.jpg": bankingImg,
-  "healthcare.jpg": healthcareImg,
-  "lifesciences.jpg": lifesciencesImg,
-  // Industry images (Custom)
-  "induustry-telecom.png": telecomCustomImg,
-  "banking-payments.png": bankingPaymentsImg,
-  "healthcare.png": healthcareCustomImg,
-  "life-science.png": lifeScienceImg,
-  // Platform images
-  "platform-ai.jpg": platformAi,
-  "platform-data.jpg": platformData,
-  "platform-analytics.jpg": platformAnalytics,
-  // About image
-  "about.jpg": aboutImg,
-  // Service images (Unsplash)
-  "data-ai.jpg": dataAiImg,
-  "product-engineering.jpg": productEngineeringImg,
-  "cloud-infrastructure.jpg": cloudInfrastructureImg,
-  "talent-solutions.jpg": talentSolutionsImg,
-  // Service images (Custom)
-  "data-ai.png": dataAiCustomImg,
-  "product-engineering.png": productEngineeringCustomImg,
-  "cloud-infrastructure.png": cloudInfrastructureCustomImg,
-  "talent-solutions.png": talentSolutionsCustomImg,
-};
-
 /* ═══════════════ CONTENT ═══════════════ */
 const C = (() => {
   const data = { ...contentData };
@@ -99,7 +22,7 @@ const C = (() => {
   if (data.leadership) {
     data.leadership = data.leadership.map(leader => ({
       ...leader,
-      img: imageMap[leader.img] || leader.img
+      img: getImage(leader.img)
     }));
   }
   
@@ -121,7 +44,7 @@ const C = (() => {
   if (data.footer && data.footer.columns) {
     data.footer.cols = data.footer.columns.map(col => ({
       title: col.title,
-      links: col.links.map(link => link.label)
+      links: col.links.map(link => ({ label: link.label, href: link.href }))
     }));
   }
   
@@ -134,7 +57,7 @@ const C = (() => {
       p: slide.description || slide.p,
       cta: slide.cta?.label || slide.cta,
       href: slide.cta?.href || slide.href || "#",
-      img: imageMap[slide.img] || slide.img || heroAi
+      img: getImage(slide.img)
     }));
   }
   
@@ -147,12 +70,12 @@ const C = (() => {
   if (!data.industries) {
     data.industries = data.verticals?.map(v => ({
       name: v.sectionLabel,
-      img: imageMap[v.img] || v.img
+      img: getImage(v.img)
     })) || [];
   } else {
     data.industries = data.industries.map(ind => ({
       ...ind,
-      img: imageMap[ind.img] || ind.img
+      img: getImage(ind.img)
     }));
   }
   
@@ -163,7 +86,7 @@ const C = (() => {
     title: svc.sectionLabel,
     desc: svc.description,
     icon: svc.icon,
-    img: dataAiImg
+    img: getImage(svc.img)
   }));
   }
   
@@ -175,7 +98,7 @@ const C = (() => {
       name: pl.name || pl.title || "Platform",
       desc: pl.desc || pl.description || "",
       features: pl.features || [],
-      img: imageMap[pl.img] || pl.img || platformAi
+      img: getImage(pl.img)
     }));
   }
   
@@ -187,7 +110,7 @@ const C = (() => {
     if (typeof data.about.vision === 'object' && data.about.vision?.text) {
       data.about.vision = data.about.vision.text;
     }
-    data.about.img = imageMap["about.jpg"] || aboutImg;
+    data.about.img = getImage(data.about.img);
   }
   
   return data;
@@ -240,7 +163,11 @@ const Navbar = ({ isDetailPage }) => {
       { label: "Cloud & Infrastructure", href: "#/services/cloud-infrastructure" },
       { label: "Talent Solutions", href: "#/services/talent-solutions" }
     ]},
-    { l: "Company", h: "#about", s: ["About Us", "Leadership", "Partners"] },
+    { l: "Company", h: "#about", s: ["About Us", "Leadership", "Partners"], subLinks: [
+      { label: "About Us", href: "#about" },
+      { label: "Leadership", href: "#leadership" },
+      { label: "Partners", href: "#partners" }
+    ]},
     { l: "Careers", h: "#careers" },
     // { l: "Contact", h: "#contact" },
   ];
@@ -249,7 +176,7 @@ const Navbar = ({ isDetailPage }) => {
       <W style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 64 }}>
         {/* <a href="#" style={{ fontFamily: T.fn, fontWeight: 800, fontSize: 20, color: T.navy, textDecoration: "none" }}><span style={{ color: T.blue }}>Y</span>antransh<span style={{ color: T.blue }}>VT</span></a> */}
         <a href="#" style={{ display: "flex", alignItems: "center", gap: 8, textDecoration: "none" }}>
-        <img src={logo} alt="YantranshVT" style={{ height: 36 }} />
+        <img src={getImage(contentData.company.logoImg)} alt={contentData.company.name} style={{ height: 36 }} />
         <span style={{ fontFamily: T.fn, fontWeight: 800, fontSize: 20, color: T.navy }}>
           <span style={{ color: T.blue }}>Y</span>antransh<span style={{ color: T.blue }}>VT</span>
         </span>
@@ -864,8 +791,8 @@ const Footer = () => (
         {C.footer.cols.map(col => (
           <div key={col.title}>
             <h4 style={{ fontFamily: T.fn, fontSize: 13, fontWeight: 700, color: T.white, marginBottom: 12 }}>{col.title}</h4>
-            {col.links.map(l => <a key={l} href={footerHref(l)} style={{ display: "block", fontFamily: T.fn, fontSize: 12, color: "rgba(255,255,255,0.4)", textDecoration: "none", padding: "3px 0", transition: "color 0.2s" }}
-              onMouseEnter={e => e.target.style.color = T.white} onMouseLeave={e => e.target.style.color = "rgba(255,255,255,0.4)"}>{l}</a>)}
+            {col.links.map(l => <a key={l.label} href={l.href} style={{ display: "block", fontFamily: T.fn, fontSize: 12, color: "rgba(255,255,255,0.4)", textDecoration: "none", padding: "3px 0", transition: "color 0.2s" }}
+              onMouseEnter={e => e.target.style.color = T.white} onMouseLeave={e => e.target.style.color = "rgba(255,255,255,0.4)"}>{l.label}</a>)}
           </div>
         ))}
       </div>
@@ -930,6 +857,7 @@ const HomePage = () => (
 /* ═══════════════ APP ═══════════════ */
 export default function App() {
   const [currentHash, setCurrentHash] = useState(window.location.hash);
+  const [prevIsDetailPage, setPrevIsDetailPage] = useState(false);
   
   useEffect(() => {
     const handleHashChange = () => setCurrentHash(window.location.hash);
@@ -938,6 +866,14 @@ export default function App() {
   }, []);
   
   const isDetailPage = pageMap[currentHash] !== undefined;
+  
+  useEffect(() => {
+    // Only scroll to top when transitioning between detail page and homepage
+    if (prevIsDetailPage !== isDetailPage) {
+      window.scrollTo(0, 0);
+      setPrevIsDetailPage(isDetailPage);
+    }
+  }, [isDetailPage, prevIsDetailPage]);
   
   return (
     <div style={{ background: T.white }}>
