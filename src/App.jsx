@@ -159,9 +159,9 @@ const Navbar = ({ isDetailPage }) => {
       { label: "Life Sciences", href: "#/industries/lifesciences" }
     ]},
     { l: "Platforms", h: "#platforms", s: ["Agentic AI Platform", "Data Modernization Suite", "Predictive Analytics Engine"], subLinks: [
-      { label: "Agentic AI Platform", href: "#platforms-0" },
-      { label: "Data Modernization Suite", href: "#platforms-1" },
-      { label: "Predictive Analytics Engine", href: "#platforms-2" }
+      { label: "Agentic AI Platform", href: "#platforms/agentic-ai" },
+      { label: "Data Modernization Suite", href: "#platforms/data-modernization" },
+      { label: "Predictive Analytics Engine", href: "#platforms/predictive-analytics" }
     ] },
     { l: "Services", h: "#services", s: ["Data & AI", "Product Engineering", "Cloud & Infrastructure", "Talent Solutions"], subLinks: [
       { label: "Data & AI", href: "#/services/data-ai" },
@@ -170,9 +170,9 @@ const Navbar = ({ isDetailPage }) => {
       { label: "Talent Solutions", href: "#/services/talent-solutions" }
     ]},
     { l: "Company", h: "#company", s: ["About Us", "Leadership", "Partners"], subLinks: [
-      { label: "About Us", href: "#company-0" },
-      { label: "Leadership", href: "#company-1" },
-      { label: "Partners", href: "#company-2" }
+      { label: "About Us", href: "#company/about-us" },
+      { label: "Leadership", href: "#company/leadership" },
+      { label: "Partners", href: "#company/partners" }
     ]},
     { l: "Careers", h: "#careers" },
     // { l: "Contact", h: "#contact" },
@@ -345,24 +345,18 @@ const Platforms = () => {
   const p = C.platforms[tab];
 
   useEffect(() => {
-    const match = window.location.hash.match(/^#platforms-(\d)$/);
-    if (match) {
-      const idx = parseInt(match[1], 10);
-      if (idx >= 0 && idx < C.platforms.length) {
-        setTab(idx);
-      }
-    }
+    const hash = window.location.hash;
+    if (hash === "#platforms/agentic-ai") setTab(0);
+    else if (hash === "#platforms/data-modernization") setTab(1);
+    else if (hash === "#platforms/predictive-analytics") setTab(2);
   }, []);
 
   useEffect(() => {
     const handleHashChange = () => {
-      const match = window.location.hash.match(/^#platforms-(\d)$/);
-      if (match) {
-        const idx = parseInt(match[1], 10);
-        if (idx >= 0 && idx < C.platforms.length) {
-          setTab(idx);
-        }
-      }
+      const hash = window.location.hash;
+      if (hash === "#platforms/agentic-ai") setTab(0);
+      else if (hash === "#platforms/data-modernization") setTab(1);
+      else if (hash === "#platforms/predictive-analytics") setTab(2);
     };
     window.addEventListener("hashchange", handleHashChange);
     return () => window.removeEventListener("hashchange", handleHashChange);
@@ -427,24 +421,18 @@ const Company = () => {
   const leaders = C.leadership;
 
   useEffect(() => {
-    const match = window.location.hash.match(/^#company-(\d)$/);
-    if (match) {
-      const idx = parseInt(match[1], 10);
-      if (idx >= 0 && idx < 3) {
-        setTab(idx);
-      }
-    }
+    const hash = window.location.hash;
+    if (hash === "#company/about-us") setTab(0);
+    else if (hash === "#company/leadership") setTab(1);
+    else if (hash === "#company/partners") setTab(2);
   }, []);
 
   useEffect(() => {
     const handleHashChange = () => {
-      const match = window.location.hash.match(/^#company-(\d)$/);
-      if (match) {
-        const idx = parseInt(match[1], 10);
-        if (idx >= 0 && idx < 3) {
-          setTab(idx);
-        }
-      }
+      const hash = window.location.hash;
+      if (hash === "#company/about-us") setTab(0);
+      else if (hash === "#company/leadership") setTab(1);
+      else if (hash === "#company/partners") setTab(2);
     };
     window.addEventListener("hashchange", handleHashChange);
     return () => window.removeEventListener("hashchange", handleHashChange);
@@ -470,7 +458,7 @@ const Company = () => {
         <Rv><h2 style={{ fontFamily: T.fd, fontSize: 36, fontWeight: 700, color: T.navy, marginBottom: 8 }}>Company</h2></Rv>
         <Rv d={0.06}><p style={{ fontFamily: T.fn, fontSize: 15, color: T.txtS, lineHeight: 1.7, maxWidth: 600, marginBottom: 32 }}>Learn more about our mission, leadership team, and strategic partnerships.</p></Rv>
         {/* Tabs */}
-        <div style={{ display: "flex", gap: 0, borderBottom: `2px solid ${T.bdr}`, marginBottom: 50, justifyContent: "center" }}>
+        <div style={{ display: "flex", gap: 0, borderBottom: `2px solid ${T.bdr}`, marginBottom: 36 }}>
           {tabs.map((t, i) => (
             <button key={i} onClick={() => setTab(i)} style={{ padding: "12px 24px", background: "transparent", border: "none", borderBottom: tab === i ? `3px solid ${T.blue}` : "3px solid transparent", cursor: "pointer", marginBottom: -2, transition: "all 0.3s" }}>
               <span style={{ fontFamily: T.fn, fontSize: 15, fontWeight: 700, color: tab === i ? T.blue : T.txtS }}>{t.name}</span>
@@ -508,7 +496,7 @@ const Company = () => {
           <div>
             <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 30 }}>
               {/* Left Arrow */}
-              <button onClick={prevLead} style={{ background: "none", border: "none", cursor: "pointer", color: T.blue, display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.2s", flexShrink: 0 }} onMouseEnter={e => e.currentTarget.style.transform = "scale(1.1)"} onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}><Icon name="chevL" size={32} /></button>
+              <button onClick={prevLead} style={{  background: "none", border: "none", cursor: "pointer", color: T.blue, display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.2s", flexShrink: 0 }} onMouseEnter={e => e.currentTarget.style.transform = "scale(1.1)"} onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}><Icon name="chevL" size={32} /></button>
 
               {/* Multiple Circular Images */}
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20, maxWidth: 1000 }}>
@@ -961,10 +949,10 @@ export default function App() {
   useEffect(() => {
     if (!isDetailPage && currentHash && currentHash !== "#" && !currentHash.startsWith("#/")) {
       let targetId = currentHash.slice(1);
-      if (/^platforms-\d$/.test(targetId)) {
+      if (/^platforms\/(agentic-ai|data-modernization|predictive-analytics)$/.test(targetId)) {
         targetId = "platforms";
       }
-      if (/^company-\d$/.test(targetId)) {
+      if (/^company\/(about-us|leadership|partners)$/.test(targetId)) {
         targetId = "company";
       }
       const targetEl = document.getElementById(targetId);

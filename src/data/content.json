@@ -226,7 +226,7 @@
     "columns": [
       { "title": "Industries", "links": [{ "label": "Telecom", "href": "#/industries/telecom" }, { "label": "Banking & Financial Services", "href": "#/industries/banking" }, { "label": "Healthcare", "href": "#/industries/healthcare" }, { "label": "Life Sciences", "href": "#/industries/lifesciences" }] },
       { "title": "Services", "links": [{ "label": "Data & AI Transformation", "href": "#/services/data-ai" }, { "label": "Product Engineering", "href": "#/services/product-engineering" }, { "label": "Cloud & Infrastructure", "href": "#/services/cloud-infrastructure" }, { "label": "Talent Solutions", "href": "#/services/talent-solutions" }] },
-      { "title": "Company", "links": [{ "label": "About Us", "href": "/#company-0" }, { "label": "Leadership", "href": "/#company-1" }, { "label": "Partners", "href": "/#company-2" }, { "label": "Contact", "href": "/#contact" }] }
+      { "title": "Company", "links": [{ "label": "About Us", "href": "/#company/about-us" }, { "label": "Leadership", "href": "/#company/leadership" }, { "label": "Partners", "href": "/#company/partners" }, { "label": "Contact", "href": "/#contact" }] }
     ]
   },
   "pages": {
