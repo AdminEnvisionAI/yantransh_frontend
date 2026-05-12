@@ -66,6 +66,27 @@ const Telecom = () => {
                 </div>
               </Rv>
             ))}
+            
+            {(page.slides || []).length > 0 && (page.slides || []).map((slide, i) => (
+              <Rv key={`slide-${i}`} d={0.3 + i * 0.08}>
+                <div style={{ padding: 24, background: T.bgAlt, borderRadius: T.r, border: `1px solid ${T.bdr}`, height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+                  {slide.image && (
+                    <div style={{ marginBottom: 16, width: "100%" }}>
+                      <img 
+                        src={getImage(slide.image)} 
+                        alt="Telecom Slide" 
+                        style={{ width: "100%", height: "auto", borderRadius: T.r, boxShadow: "0 10px 40px rgba(0,0,0,0.1)" }} 
+                      />
+                    </div>
+                  )}
+                  {slide.content && (
+                    <p style={{ fontFamily: T.fn, fontSize: 14, color: T.txt, lineHeight: 1.7, textAlign: "center", fontWeight: 500 }}>
+                      {slide.content}
+                    </p>
+                  )}
+                </div>
+              </Rv>
+            ))}
           </div>
 
           <Rv d={0.4}>
