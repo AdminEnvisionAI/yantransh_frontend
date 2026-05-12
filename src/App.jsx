@@ -169,10 +169,10 @@ const Navbar = ({ isDetailPage }) => {
       { label: "Cloud & Infrastructure", href: "#/services/cloud-infrastructure" },
       { label: "Talent Solutions", href: "#/services/talent-solutions" }
     ]},
-    { l: "Company", h: "#about", s: ["About Us", "Leadership", "Partners"], subLinks: [
-      { label: "About Us", href: "#about" },
-      { label: "Leadership", href: "#leadership" },
-      { label: "Partners", href: "#partners" }
+    { l: "Company", h: "#company", s: ["About Us", "Leadership", "Partners"], subLinks: [
+      { label: "About Us", href: "#company-0" },
+      { label: "Leadership", href: "#company-1" },
+      { label: "Partners", href: "#company-2" }
     ]},
     { l: "Careers", h: "#careers" },
     // { l: "Contact", h: "#contact" },
@@ -421,38 +421,34 @@ const MetricsBar = () => { const [r, v] = useInView(); return (
   </section>
 ); };
 
-const About = () => (
-  <section id="about" style={{ padding: "70px 0 80px", background: T.bgAlt }}>
-    <W>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 400px), 1fr))", gap: 40, alignItems: "center" }}>
-        <Rv>
-          <div style={{ borderRadius: 12, overflow: "hidden", boxShadow: "0 8px 30px rgba(0,0,0,0.1)" }}>
-            <img src={C.about.img} alt="About" style={{ width: "100%", height: 360, objectFit: "cover", display: "block" }} />
-          </div>
-        </Rv>
-        <div>
-          <Rv><h2 style={{ fontFamily: T.fd, fontSize: 36, fontWeight: 700, color: T.navy, marginBottom: 24 }}>Who We Are</h2></Rv>
-          <Rv d={0.08}>
-            <div style={{ padding: "24px 0", borderBottom: `1px solid ${T.bdr}` }}>
-              <h3 style={{ fontFamily: T.fn, fontSize: 16, fontWeight: 700, color: T.blue, marginBottom: 8 }}>Our Mission</h3>
-              <p style={{ fontFamily: T.fn, fontSize: 14, color: T.txtS, lineHeight: 1.7 }}>{C.about.mission}</p>
-            </div>
-          </Rv>
-          <Rv d={0.14}>
-            <div style={{ padding: "24px 0" }}>
-              <h3 style={{ fontFamily: T.fn, fontSize: 16, fontWeight: 700, color: T.blue, marginBottom: 8 }}>Our Vision</h3>
-              <p style={{ fontFamily: T.fn, fontSize: 14, color: T.txtS, lineHeight: 1.7 }}>{C.about.vision}</p>
-            </div>
-          </Rv>
-        </div>
-      </div>
-    </W>
-  </section>
-);
-
-const Leadership = () => {
+const Company = () => {
+  const [tab, setTab] = useState(0);
   const [focusIdx, setFocusIdx] = useState(0);
   const leaders = C.leadership;
+
+  useEffect(() => {
+    const match = window.location.hash.match(/^#company-(\d)$/);
+    if (match) {
+      const idx = parseInt(match[1], 10);
+      if (idx >= 0 && idx < 3) {
+        setTab(idx);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const match = window.location.hash.match(/^#company-(\d)$/);
+      if (match) {
+        const idx = parseInt(match[1], 10);
+        if (idx >= 0 && idx < 3) {
+          setTab(idx);
+        }
+      }
+    };
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
 
   const nextLead = () => {
     setFocusIdx((focusIdx + 1) % leaders.length);
@@ -462,83 +458,128 @@ const Leadership = () => {
     setFocusIdx((focusIdx - 1 + leaders.length) % leaders.length);
   };
 
+  const tabs = [
+    { name: "About Us", id: "about" },
+    { name: "Leadership", id: "leadership" },
+    { name: "Partners", id: "partners" }
+  ];
+
   return (
-    <section id="leadership" style={{ padding: "70px 0 80px", background: T.white }}>
+    <section id="company" style={{ padding: "70px 0 80px", background: T.bgAlt }}>
       <W>
-        <Rv><h2 style={{ fontFamily: T.fd, fontSize: 36, fontWeight: 700, color: T.navy, marginBottom: 50, textAlign: "center" }}>Leadership</h2></Rv>
-        
-        {/* Carousel with Multiple Images */}
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 30 }}>
-          {/* Left Arrow */}
-          <button onClick={prevLead} style={{ background: "none", border: "none", cursor: "pointer", color: T.blue, display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.2s", flexShrink: 0 }} onMouseEnter={e => e.currentTarget.style.transform = "scale(1.1)"} onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}><Icon name="chevL" size={32} /></button>
-
-          {/* Multiple Circular Images */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20, maxWidth: 1000 }}>
-            {leaders.map((d, idx) => {
-              const isSelected = idx === focusIdx;
-              return (
-                <Rv key={idx}>
-                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", cursor: "pointer" }} onClick={() => setFocusIdx(idx)}>
-                    {/* Circular Image Container with Gradient Background */}
-                    <div style={getCircularImageStyles(isSelected)} onMouseEnter={e => !isSelected && (e.currentTarget.style.transform = "translateY(-8px)")} onMouseLeave={e => !isSelected && (e.currentTarget.style.transform = "translateY(0)")}>
-                      {/* Background Gradient Circle */}
-                      <div style={getCircularImageBackgroundStyles(isSelected)} />
-                      
-                      {/* Inner Image Container */}
-                      <div style={getCircularImageInnerStyles(isSelected)}>
-                        <img src={d.img} alt={d.name} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-                        {isSelected && <div style={{ position: "absolute", inset: 0, borderRadius: "50%", background: "radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2), transparent)", pointerEvents: "none" }} />}
-                      </div>
-                    </div>
-                    <h4 style={{ fontFamily: T.fn, fontSize: isSelected ? 17 : 15, fontWeight: isSelected ? 800 : 700, color: isSelected ? T.blue : T.navy, marginBottom: 4 }}>{d.name}</h4>
-                    <p style={{ fontFamily: T.fn, fontSize: isSelected ? 13 : 12, color: isSelected ? T.blue : T.txtS, fontWeight: isSelected ? 700 : 600, margin: 0 }}>{d.title}</p>
-                  </div>
-                </Rv>
-              );
-            })}
-          </div>
-
-          {/* Right Arrow */}
-          <button onClick={nextLead} style={{ background: "none", border: "none", cursor: "pointer", color: T.blue, display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.2s", flexShrink: 0 }} onMouseEnter={e => e.currentTarget.style.transform = "scale(1.1)"} onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}><Icon name="chevR" size={32} /></button>
+        <Rv><h2 style={{ fontFamily: T.fd, fontSize: 36, fontWeight: 700, color: T.navy, marginBottom: 8 }}>Company</h2></Rv>
+        <Rv d={0.06}><p style={{ fontFamily: T.fn, fontSize: 15, color: T.txtS, lineHeight: 1.7, maxWidth: 600, marginBottom: 32 }}>Learn more about our mission, leadership team, and strategic partnerships.</p></Rv>
+        {/* Tabs */}
+        <div style={{ display: "flex", gap: 0, borderBottom: `2px solid ${T.bdr}`, marginBottom: 50, justifyContent: "center" }}>
+          {tabs.map((t, i) => (
+            <button key={i} onClick={() => setTab(i)} style={{ padding: "12px 24px", background: "transparent", border: "none", borderBottom: tab === i ? `3px solid ${T.blue}` : "3px solid transparent", cursor: "pointer", marginBottom: -2, transition: "all 0.3s" }}>
+              <span style={{ fontFamily: T.fn, fontSize: 15, fontWeight: 700, color: tab === i ? T.blue : T.txtS }}>{t.name}</span>
+            </button>
+          ))}
         </div>
 
-        {/* Quote Section */}
-        {leaders.length > 0 && (
-          <Rv d={0.15}>
-            <div style={{ marginTop: 60, textAlign: "center", maxWidth: 800, margin: "60px auto 0" }}>
-              <div style={{ position: "relative", marginBottom: 30 }}>
-                <div style={{ fontSize: 100, fontFamily: "Georgia, serif", color: T.blue, opacity: 0.1, lineHeight: 0.8, position: "absolute", top: -40, left: "50%", transform: "translateX(-50%)" }}>{"\u201C"}</div>
-                <p style={{ fontFamily: T.fd, fontSize: 18, fontWeight: 400, fontStyle: "italic", color: T.txt, lineHeight: 1.7, position: "relative", zIndex: 1, marginTop: 20 }}>{leaders[focusIdx].quote}</p>
+        {/* Content */}
+        {tab === 0 && (
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 400px), 1fr))", gap: 40, alignItems: "center" }}>
+            <Rv>
+              <div style={{ borderRadius: 12, overflow: "hidden", boxShadow: "0 8px 30px rgba(0,0,0,0.1)" }}>
+                <img src={C.about.img} alt="About" style={{ width: "100%", height: 360, objectFit: "cover", display: "block" }} />
               </div>
-              <div>
-                <span style={{ fontFamily: T.fn, fontSize: 16, fontWeight: 700, color: T.navy }}>— {leaders[focusIdx].name}</span><br />
-                <span style={{ fontFamily: T.fn, fontSize: 13, color: T.blue, fontWeight: 600 }}>{leaders[focusIdx].title}</span>
-              </div>
+            </Rv>
+            <div>
+              <Rv><h2 style={{ fontFamily: T.fd, fontSize: 36, fontWeight: 700, color: T.navy, marginBottom: 24 }}>Who We Are</h2></Rv>
+              <Rv d={0.08}>
+                <div style={{ padding: "24px 0", borderBottom: `1px solid ${T.bdr}` }}>
+                  <h3 style={{ fontFamily: T.fn, fontSize: 16, fontWeight: 700, color: T.blue, marginBottom: 8 }}>Our Mission</h3>
+                  <p style={{ fontFamily: T.fn, fontSize: 14, color: T.txtS, lineHeight: 1.7 }}>{C.about.mission}</p>
+                </div>
+              </Rv>
+              <Rv d={0.14}>
+                <div style={{ padding: "24px 0" }}>
+                  <h3 style={{ fontFamily: T.fn, fontSize: 16, fontWeight: 700, color: T.blue, marginBottom: 8 }}>Our Vision</h3>
+                  <p style={{ fontFamily: T.fn, fontSize: 14, color: T.txtS, lineHeight: 1.7 }}>{C.about.vision}</p>
+                </div>
+              </Rv>
             </div>
-          </Rv>
+          </div>
+        )}
+
+        {tab === 1 && (
+          <div>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 30 }}>
+              {/* Left Arrow */}
+              <button onClick={prevLead} style={{ background: "none", border: "none", cursor: "pointer", color: T.blue, display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.2s", flexShrink: 0 }} onMouseEnter={e => e.currentTarget.style.transform = "scale(1.1)"} onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}><Icon name="chevL" size={32} /></button>
+
+              {/* Multiple Circular Images */}
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20, maxWidth: 1000 }}>
+                {leaders.map((d, idx) => {
+                  const isSelected = idx === focusIdx;
+                  return (
+                    <Rv key={idx}>
+                      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", cursor: "pointer" }} onClick={() => setFocusIdx(idx)}>
+                        {/* Circular Image Container with Gradient Background */}
+                        <div style={getCircularImageStyles(isSelected)} onMouseEnter={e => !isSelected && (e.currentTarget.style.transform = "translateY(-8px)")} onMouseLeave={e => !isSelected && (e.currentTarget.style.transform = "translateY(0)")}>
+                          {/* Background Gradient Circle */}
+                          <div style={getCircularImageBackgroundStyles(isSelected)} />
+                          
+                          {/* Inner Image Container */}
+                          <div style={getCircularImageInnerStyles(isSelected)}>
+                            <img src={d.img} alt={d.name} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                            {isSelected && <div style={{ position: "absolute", inset: 0, borderRadius: "50%", background: "radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2), transparent)", pointerEvents: "none" }} />}
+                          </div>
+                        </div>
+                        <h4 style={{ fontFamily: T.fn, fontSize: isSelected ? 17 : 15, fontWeight: isSelected ? 800 : 700, color: isSelected ? T.blue : T.navy, marginBottom: 4 }}>{d.name}</h4>
+                        <p style={{ fontFamily: T.fn, fontSize: isSelected ? 13 : 12, color: isSelected ? T.blue : T.txtS, fontWeight: isSelected ? 700 : 600, margin: 0 }}>{d.title}</p>
+                      </div>
+                    </Rv>
+                  );
+                })}
+              </div>
+
+              {/* Right Arrow */}
+              <button onClick={nextLead} style={{ background: "none", border: "none", cursor: "pointer", color: T.blue, display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.2s", flexShrink: 0 }} onMouseEnter={e => e.currentTarget.style.transform = "scale(1.1)"} onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}><Icon name="chevR" size={32} /></button>
+            </div>
+
+            {/* Quote Section */}
+            {leaders.length > 0 && (
+              <Rv d={0.15}>
+                <div style={{ marginTop: 60, textAlign: "center", maxWidth: 800, margin: "60px auto 0" }}>
+                  <div style={{ position: "relative", marginBottom: 30 }}>
+                    <div style={{ fontSize: 100, fontFamily: "Georgia, serif", color: T.blue, opacity: 0.1, lineHeight: 0.8, position: "absolute", top: -40, left: "50%", transform: "translateX(-50%)" }}>{"\u201C"}</div>
+                    <p style={{ fontFamily: T.fd, fontSize: 18, fontWeight: 400, fontStyle: "italic", color: T.txt, lineHeight: 1.7, position: "relative", zIndex: 1, marginTop: 20 }}>{leaders[focusIdx].quote}</p>
+                  </div>
+                  <div>
+                    <span style={{ fontFamily: T.fn, fontSize: 16, fontWeight: 700, color: T.navy }}>— {leaders[focusIdx].name}</span><br />
+                    <span style={{ fontFamily: T.fn, fontSize: 13, color: T.blue, fontWeight: 600 }}>{leaders[focusIdx].title}</span>
+                  </div>
+                </div>
+              </Rv>
+            )}
+          </div>
+        )}
+
+        {tab === 2 && (
+          <div>
+            <Rv><p style={{ fontFamily: T.fn, fontSize: 15, color: T.txtS, textAlign: "center", maxWidth: 520, margin: "0 auto 36px", lineHeight: 1.7 }}>Our strong technology stack, digital expertise and partnerships with leading technology companies enable us to deliver superior digital experiences.</p></Rv>
+            <Rv d={0.1}>
+              <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: 14 }}>
+                {C.partners.map((p, i) => (
+                  <div key={i} style={{ padding: "14px 28px", background: T.white, borderRadius: T.r, border: `1px solid ${T.bdr}`, fontFamily: T.fn, fontSize: 14, fontWeight: 700, color: T.txtS, whiteSpace: "nowrap", transition: "all 0.2s" }}
+                    onMouseEnter={e => { e.currentTarget.style.borderColor = T.blue; e.currentTarget.style.color = T.blue; }}
+                    onMouseLeave={e => { e.currentTarget.style.borderColor = T.bdr; e.currentTarget.style.color = T.txtS; }}>{p}</div>
+                ))}
+              </div>
+            </Rv>
+          </div>
         )}
       </W>
     </section>
   );
 };
 
-const Partners = () => (
-  <section id="partners" style={{ padding: "60px 0 70px", background: T.bgAlt }}>
-    <W>
-      <Rv><h2 style={{ fontFamily: T.fd, fontSize: 36, fontWeight: 700, color: T.navy, marginBottom: 8, textAlign: "center" }}>Partners</h2></Rv>
-      <Rv d={0.06}><p style={{ fontFamily: T.fn, fontSize: 15, color: T.txtS, textAlign: "center", maxWidth: 520, margin: "0 auto 36px", lineHeight: 1.7 }}>Our strong technology stack, digital expertise and partnerships with leading technology companies enable us to deliver superior digital experiences.</p></Rv>
-      <Rv d={0.1}>
-        <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: 14 }}>
-          {C.partners.map((p, i) => (
-            <div key={i} style={{ padding: "14px 28px", background: T.white, borderRadius: T.r, border: `1px solid ${T.bdr}`, fontFamily: T.fn, fontSize: 14, fontWeight: 700, color: T.txtS, whiteSpace: "nowrap", transition: "all 0.2s" }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = T.blue; e.currentTarget.style.color = T.blue; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = T.bdr; e.currentTarget.style.color = T.txtS; }}>{p}</div>
-          ))}
-        </div>
-      </Rv>
-    </W>
-  </section>
-);
+const Leadership = () => null;
+
+const Partners = () => null;
 
 /* ═══════════════ CONTACT + CAREERS ═══════════════ */
 const Connect = () => {
@@ -889,9 +930,7 @@ const HomePage = () => (
     <Services />
     <Platforms />
     <MetricsBar />
-    <About />
-    <Leadership />
-    <Partners />
+    <Company />
     <Connect />
   </>
 );
@@ -924,6 +963,9 @@ export default function App() {
       let targetId = currentHash.slice(1);
       if (/^platforms-\d$/.test(targetId)) {
         targetId = "platforms";
+      }
+      if (/^company-\d$/.test(targetId)) {
+        targetId = "company";
       }
       const targetEl = document.getElementById(targetId);
       if (targetEl) {

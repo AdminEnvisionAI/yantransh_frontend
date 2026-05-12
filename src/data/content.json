@@ -226,7 +226,7 @@
     "columns": [
       { "title": "Industries", "links": [{ "label": "Telecom", "href": "#/industries/telecom" }, { "label": "Banking & Financial Services", "href": "#/industries/banking" }, { "label": "Healthcare", "href": "#/industries/healthcare" }, { "label": "Life Sciences", "href": "#/industries/lifesciences" }] },
       { "title": "Services", "links": [{ "label": "Data & AI Transformation", "href": "#/services/data-ai" }, { "label": "Product Engineering", "href": "#/services/product-engineering" }, { "label": "Cloud & Infrastructure", "href": "#/services/cloud-infrastructure" }, { "label": "Talent Solutions", "href": "#/services/talent-solutions" }] },
-      { "title": "Company", "links": [{ "label": "About Us", "href": "/#about" }, { "label": "Leadership", "href": "/#leadership" }, { "label": "Partners", "href": "/#partners" }, { "label": "Contact", "href": "/#contact" }] }
+      { "title": "Company", "links": [{ "label": "About Us", "href": "/#company-0" }, { "label": "Leadership", "href": "/#company-1" }, { "label": "Partners", "href": "/#company-2" }, { "label": "Contact", "href": "/#contact" }] }
     ]
   },
   "pages": {
@@ -246,7 +246,13 @@
       "ctaText": "Whether it's enhancing connectivity or hyper-personalizing the user journey, we turn technological potential into business reality. We don't just upgrade your systems; we modernize your entire value proposition for a data-driven world.",
       "ctaButton": "Reach Out Today",
       "backLink": "#/industries",
-      "backLabel": "Back to Industries"
+      "backLabel": "Back to Industries",
+      "slides": [
+        {
+          "image": "telecom-slide.png",
+          "content": "From services to product we would be happy to help in all."
+        }
+      ]
     },
     "banking": {
       "category": "Industries",
