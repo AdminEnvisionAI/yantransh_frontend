@@ -48,7 +48,7 @@
       "description": "We leverage domain expertise, solutions capabilities, and an outcomes-based approach to unlock significant value from AI investments.",
       "cta": { "label": "Explore Services", "href": "#services" },
       "accent": "#00E0C3",
-      "img": "hero-ai.jpg"
+      "img": "hero-ai-new.png"
     },
     {
       "label": "Strategy to Execution",
@@ -56,7 +56,7 @@
       "description": "Bridging the gap between ambitious business goals and measurable digital transformation outcomes across four continents.",
       "cta": { "label": "Learn More", "href": "#about" },
       "accent": "#00B4D8",
-      "img": "hero-strategy.jpg"
+      "img": "hero-strategy-new.png"
     },
     {
       "label": "Elite Talent",
@@ -64,7 +64,7 @@
       "description": "Accelerate projects with our Resource Augmentation model — full-stack engineers, cloud architects, data scientists, and more.",
       "cta": { "label": "View Talent", "href": "#/services/talent-solutions" },
       "accent": "#5CE1C5",
-      "img": "hero-talent.jpg"
+      "img": "hero-talent-new.png"
     }
   ],
   "about": {
@@ -96,7 +96,7 @@
       "sectionLabel": "DATA & AI TRANSFORMATION",
       "description": "We deliver AI & Data-driven solutions at scale, solving critical business challenges and unlocking growth through Agentic AI, Data Modernization, and Predictive ROI frameworks.",
       "icon":"brain",
-      "img": "data-ai.jpg"
+      "img": "data-ai.png"
     },
     {
       "id": "product-engineering",
@@ -162,14 +162,14 @@
     { "id": "telecom", "sectionLabel": "TELECOM", "headline": "Next-Gen Connectivity", "description": "We help Telcos navigate the 5G transition by modernizing OSS/BSS platforms and automating customer experience journeys.", 
     "features": ["5G Network Assurance", "AI-Led Customer Support", "Zero-Touch Provisioning"], 
     "icon": "signal",
-    "img": "telecom.jpg"
+    "img": "telecom-new.png"
      },
     { "id": "bfsi", "sectionLabel": "BFSI", "headline": "Future-Ready Finance", "description": "Transforming banking, financial services, and insurance through real-time payments, risk AI, and personalized wealth management.", 
     "features": ["Fraud Detection & AML", "Digital Payments Core", "Algorithmic Trading Platforms"], 
     "icon": "dollar",
     "img": "banking.jpg" },
     { "id": "healthcare", "sectionLabel": "HEALTHCARE", "headline": "Patient-Centric Technology", "description": "Enhancing healthcare delivery through interoperable data platforms, AI diagnostics, and remote patient monitoring.", "features": ["Interoperable EHR Systems", "Telehealth & Virtual Care", "Clinical Decision Support"], "icon": "heart",
-                "img": "healthcare.jpg" },
+                "img": "healthcare.png" },
     { "id": "lifesciences", "sectionLabel": "LIFE SCIENCES", "headline": "Accelerating Discovery", "description": "Digitalizing the drug discovery pipeline and clinical trials through advanced data analytics and regulatory compliance tech.", "features": ["AI-Driven Drug Discovery", "Clinical Trial Automation", "Lab Informatics Modernization"], "icon": "flask",
                 "img": "lifesciences.jpg"
     }
@@ -235,7 +235,7 @@
       "title": "Telecom",
       "subtitle": "Accelerating Telecom Excellence",
       "heroDescription": "In the rapidly evolving telecom sector, staying ahead requires a perfect harmony of operational speed and world-class customer engagement. At Yantransh, we empower service providers to bridge this gap through our proprietary AI@Tele framework. By integrating digital-native engineering with deep industry insights, we help telcos unlock the true power of their network infrastructure.",
-      "image": "induustry-telecom.png",
+      "image": "telecom-new.png",
       "introText": "Our approach is designed to deliver measurable impact across four key pillars:",
       "offerings": [
         { "title": "Digital Experience Transformation", "description": "Revolutionizing how customers interact with your brand across every digital touchpoint." },
@@ -259,7 +259,7 @@
       "title": "Banking & Payments",
       "subtitle": "Modernizing the Future of Banking",
       "heroDescription": "The banking landscape is undergoing a radical shift, driven by the dual demand for frictionless customer journeys and leaner operational costs. To maintain a competitive edge, financial institutions must master the convergence of business strategy and technological agility. At Yantransh, we facilitate this evolution by focusing on critical strategic pivots.",
-      "image": "banking-payments.png",
+      "image": "banking.jpg",
       "introText": "We specialize in creating a fully integrated digital ecosystem that empowers your organization to thrive:",
       "offerings": [
         { "title": "Digital Platform Acceleration", "description": "We help banks rapidly adopt and scale digital-first platforms that meet the high-speed expectations of modern consumers." },
