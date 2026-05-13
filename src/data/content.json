@@ -155,8 +155,8 @@
   },
   "leadership": [
     { "name": "Madhup Sharma", "title": "CEO & Founder", "quote": "The true value of technology is not in the tools themselves, but in the forthright knowledge of how to apply them to solve human and business problems.", "img": "MadhupLeadership.jpeg" },
-    { "name": "Krishan Pal", "title": "VP Engineering", "quote": "Future of IT industry lies in Human-AI collaboration—where technology augments human creativity to solve the world's most complex data challenges.", "img": "KrishanPalLeadership.jpeg" },
-    { "name": "Mahanthesh", "title": "Director", "quote": "Great leadership is about empowering teams to innovate and delivering excellence through collaboration and strategic vision.", "img": "MahantheshLeadership.png" }
+    { "name": "Mahanthesh", "title": "Director", "quote": "Great leadership is about empowering teams to innovate and delivering excellence through collaboration and strategic vision.", "img": "MahantheshLeadership.png" },
+    { "name": "Krishan Pal", "title": "VP Engineering", "quote": "Future of IT industry lies in Human-AI collaboration—where technology augments human creativity to solve the world's most complex data challenges.", "img": "KrishanPalLeadership.jpeg" }
   ],
   "verticals": [
     { "id": "telecom", "sectionLabel": "TELECOM", "headline": "Next-Gen Connectivity", "description": "We help Telcos navigate the 5G transition by modernizing OSS/BSS platforms and automating customer experience journeys.", 
