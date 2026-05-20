@@ -13,6 +13,10 @@ import DataAI from "./pages/DataAI";
 import ProductEngineering from "./pages/ProductEngineering";
 import CloudInfrastructure from "./pages/CloudInfrastructure";
 import TalentSolutions from "./pages/TalentSolutions";
+import Disclaimer from "./pages/Disclaimer";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfUse from "./pages/TermsOfUse";
+import CookiesPolicy from "./pages/CookiesPolicy";
 
 /* ═══════════════ CONTENT ═══════════════ */
 const C = (() => {
@@ -870,8 +874,13 @@ const Footer = () => (
       <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: 14, display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 10 }}>
         <span style={{ fontFamily: T.fn, fontSize: 11, color: "rgba(255,255,255,0.25)" }}>{"\u00A9"} {new Date().getFullYear()} YantranshVT Solutions. All rights reserved.</span>
         <div style={{ display: "flex", gap: 16 }}>
-          {["Disclaimer", "Privacy Policy", "Terms of Use", "Cookies Policy"].map(t => <a key={t} href="#" style={{ fontFamily: T.fn, fontSize: 11, color: "rgba(255,255,255,0.25)", textDecoration: "none" }}
-            onMouseEnter={e => e.target.style.color = "rgba(255,255,255,0.6)"} onMouseLeave={e => e.target.style.color = "rgba(255,255,255,0.25)"}>{t}</a>)}
+          {[
+            { label: "Disclaimer", href: "#/disclaimer" },
+            { label: "Privacy Policy", href: "#/privacy-policy" },
+            { label: "Terms of Use", href: "#/terms-of-use" },
+            { label: "Cookies Policy", href: "#/cookies-policy" }
+          ].map(t => <a key={t.label} href={t.href} style={{ fontFamily: T.fn, fontSize: 11, color: "rgba(255,255,255,0.25)", textDecoration: "none" }}
+            onMouseEnter={e => e.target.style.color = "rgba(255,255,255,0.6)"} onMouseLeave={e => e.target.style.color = "rgba(255,255,255,0.25)"}>{t.label}</a>)}
         </div>
       </div>
     </W>
@@ -891,6 +900,10 @@ const pageMap = {
   "#/services/product-engineering": ProductEngineering,
   "#/services/cloud-infrastructure": CloudInfrastructure,
   "#/services/talent-solutions": TalentSolutions,
+  "#/disclaimer": Disclaimer,
+  "#/privacy-policy": PrivacyPolicy,
+  "#/terms-of-use": TermsOfUse,
+  "#/cookies-policy": CookiesPolicy,
 };
 
 const PageRouter = () => {
