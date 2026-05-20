@@ -97,3 +97,4 @@ Thumbs.db
 # Lock files (optional, but sometimes ignored)
 # package-lock.json
 # yarn.lock
+llm.txt

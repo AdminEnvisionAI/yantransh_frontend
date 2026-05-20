@@ -48,7 +48,7 @@
       "description": "We leverage domain expertise, solutions capabilities, and an outcomes-based approach to unlock significant value from AI investments.",
       "cta": { "label": "Explore Services", "href": "#services" },
       "accent": "#00E0C3",
-      "img": "hero-ai-new.png"
+      "img": "hero-ai.jpg"
     },
     {
       "label": "Strategy to Execution",
@@ -56,7 +56,7 @@
       "description": "Bridging the gap between ambitious business goals and measurable digital transformation outcomes across four continents.",
       "cta": { "label": "Learn More", "href": "#about" },
       "accent": "#00B4D8",
-      "img": "hero-strategy-new.png"
+      "img": "hero-strategy.jpg"
     },
     {
       "label": "Elite Talent",

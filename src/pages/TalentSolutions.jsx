@@ -17,7 +17,7 @@ const TalentSolutions = () => {
       {/* Hero */}
       <section style={{ position: "relative", overflow: "hidden", background: T.navy, paddingTop: 100 }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${img})`, backgroundSize: "cover", backgroundPosition: "center", opacity: 0.7 }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg, rgba(11,29,58,0.95) 0%, rgba(11,29,58,0.8) 100%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg, rgba(11, 29, 58, 0) 0%, rgba(11, 29, 58, 0.8) 100%)" }} />
         
         <W style={{ position: "relative", zIndex: 2, paddingTop: 80, paddingBottom: 60 }}>
           <Rv d={0.1}>
