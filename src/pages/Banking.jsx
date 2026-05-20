@@ -17,17 +17,17 @@ const Banking = () => {
       {/* Hero */}
       <section style={{ position: "relative", overflow: "hidden", background: T.navy, paddingTop: 100 }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: `url(${img})`, backgroundSize: "cover", backgroundPosition: "center", opacity: 0.7 }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg, rgba(11,29,58,0.95) 0%, rgba(11,29,58,0.8) 100%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg, rgba(11, 29, 58, 0) 0%, rgba(11, 29, 58, 0.8) 100%)" }} />
         
         <W style={{ position: "relative", zIndex: 2, paddingTop: 80, paddingBottom: 60 }}>
           <Rv d={0.1}>
-            <span style={{ fontFamily: T.fn, fontSize: 13, fontWeight: 600, color: T.blue, letterSpacing: 1, textTransform: "uppercase" }}>{page.category || "Industries"}</span>
+            <span style={{ fontFamily: T.fn, fontSize: 13, fontWeight: 600, color: T.white, letterSpacing: 1, textTransform: "uppercase" }}>{page.category || "Industries"}</span>
           </Rv>
           <Rv d={0.15}>
             <h1 style={{ fontFamily: T.fd, fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 700, color: T.white, lineHeight: 1.2, margin: "16px 0 20px" }}>{page.title || "Banking & Payments"}</h1>
           </Rv>
           <Rv d={0.2}>
-            <h2 style={{ fontFamily: T.fd, fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 600, color: T.blue, marginBottom: 24 }}>{page.subtitle || ""}</h2>
+            <h2 style={{ fontFamily: T.fd, fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 600, color: T.white, marginBottom: 24 }}>{page.subtitle || ""}</h2>
           </Rv>
           <Rv d={0.25}>
             <p style={{ fontFamily: T.fn, fontSize: 16, color: "rgba(255,255,255,0.8)", lineHeight: 1.8, maxWidth: 720 }}>
