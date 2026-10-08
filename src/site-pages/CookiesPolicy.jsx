@@ -3,10 +3,8 @@
 import Link from "next/link";
 import { T, W } from "../theme";
 import { Rv } from "../components/reveal";
-import contentData from "../data/content.json";
 
-const CookiesPolicy = () => {
-    const page = contentData.pages?.["cookies-policy"] || {};
+const CookiesPolicy = ({ page = {} }) => {
 
     return (
         <div style={{ minHeight: "100vh", background: T.white }}>

@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import DetailFooter from "../../../components/detail-footer";
-import { getRouteMetadata, legalRoutes } from "../../../lib/site-routes";
+import JsonLd from "../../../components/json-ld";
+import { detailPageSchema } from "../../../lib/page-schema";
+import { getPage, getRouteMetadata, legalRoutes } from "../../../lib/site-routes";
 
 export const dynamicParams = false;
 
@@ -22,7 +24,10 @@ export default async function LegalPage({ params }) {
   const { default: Page } = await route.load();
   return (
     <>
-      <Page />
+      <JsonLd data={detailPageSchema({ kind: "legal", contentKey: route.contentKey, path: `/legal/${slug}` })} />
+      <main>
+        <Page page={getPage(route.contentKey)} />
+      </main>
       <DetailFooter />
     </>
   );

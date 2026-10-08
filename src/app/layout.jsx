@@ -1,52 +1,34 @@
 import SiteHeader from "../components/site-header";
 import LegacyHashRedirect from "../components/legacy-hash-redirect";
 import JsonLd from "../components/json-ld";
-import { SITE_NAME, SITE_URL } from "../lib/site-routes";
-import contentData from "../data/content.json";
+import { SITE_NAME, SITE_URL, ogImage } from "../lib/site-routes";
+import { graph, organizationSchema, websiteSchema } from "../lib/schema";
 import "./globals.css";
 
+const title = "YantranshVT | Strategy, Technology & Talent Excellence";
 const description =
-  "YantranshVT helps enterprises turn strategy into execution through data and AI, product engineering, cloud, talent solutions and AI products such as VoiceIQ.";
+  "YantranshVT turns enterprise strategy into execution with Data & AI, Product Engineering, Cloud, Talent Solutions and the VoiceIQ AI voice agent.";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: {
-    default: "YantranshVT | Strategy, Technology & Talent Excellence",
-    template: `%s | ${SITE_NAME}`,
-  },
+  title: { default: title, template: `%s | ${SITE_NAME}` },
   description,
   applicationName: SITE_NAME,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  category: "technology",
+  keywords: ["YantranshVT", "Yantransh", "digital transformation", "Data and AI services", "Agentic AI", "product engineering", "cloud migration", "AWS", "Azure", "staff augmentation", "telecom", "BFSI", "healthcare", "life sciences", "VoiceIQ", "AI voice agent"],
   alternates: { canonical: "/" },
-  openGraph: {
-    type: "website",
-    siteName: SITE_NAME,
-    title: "YantranshVT | Strategy, Technology & Talent Excellence",
-    description,
-    url: "/",
-    images: ["/images/logo.png"],
+  // Allow full snippets and large image previews in search results and AI answers.
+  robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  openGraph: { type: "website", siteName: SITE_NAME, locale: "en_US", title, description, url: "/", images: [ogImage("home", title)] },
+  twitter: { card: "summary_large_image", title, description, images: ["/og/home.png"] },
+  icons: { icon: "/images/logo.png", apple: "/images/logo-square.png" },
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
+    other: process.env.BING_SITE_VERIFICATION ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION } : undefined,
   },
-  twitter: { card: "summary_large_image" },
-  icons: { icon: "/images/logo.png" },
-};
-
-const organization = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": `${SITE_URL}/#organization`,
-  name: SITE_NAME,
-  url: SITE_URL,
-  logo: `${SITE_URL}/images/logo.png`,
-  slogan: contentData.company.tagline,
-  email: contentData.company.email,
-  address: contentData.company.locations.map((loc) => ({ "@type": "PostalAddress", addressLocality: loc.city, addressCountry: loc.country })),
-  contactPoint: [
-    { "@type": "ContactPoint", contactType: "sales", email: "Info@yantranshVT.com" },
-    { "@type": "ContactPoint", contactType: "human resources", email: "HR@yantranshVT.com" },
-  ],
-  makesOffer: contentData.products.map((product) => ({
-    "@type": "Offer",
-    itemOffered: { "@type": "SoftwareApplication", name: product.name, url: `${SITE_URL}${product.href}` },
-  })),
 };
 
 export default function RootLayout({ children }) {
@@ -59,7 +41,8 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap"
           rel="stylesheet"
         />
-        <JsonLd data={organization} />
+        <link rel="alternate" type="text/plain" title="LLM-friendly site summary" href="/llms.txt" />
+        <JsonLd data={graph(organizationSchema(), websiteSchema())} />
       </head>
       <body>
         <div style={{ background: "#fff" }}>

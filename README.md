@@ -52,6 +52,37 @@ Setup:
 Without SMTP settings the forms show a friendly error and nothing is sent; without
 the Turnstile secret every submission is rejected (both are logged on the server).
 
+## Search and AI visibility (SEO, AEO, GEO)
+
+Built in:
+
+- **Metadata:** unique title, description, canonical URL, Open Graph and Twitter
+  cards on every page; `max-snippet`/`max-image-preview` robots directives.
+- **Structured data (JSON-LD):** Organization and WebSite on every page; WebPage,
+  BreadcrumbList, Service and FAQPage on industry/service pages;
+  SoftwareApplication (with pricing) and FAQPage on `/voiceiq` (`src/lib/schema.js`).
+- **FAQs:** visible FAQ sections on the homepage, every industry/service page
+  and VoiceIQ, matching the FAQPage data. Edit them in `src/data/faqs.json`
+  (VoiceIQ: `src/components/voiceiq/faqs.ts`).
+- **AI crawlers:** `robots.txt` explicitly allows search engines and AI
+  assistants (ChatGPT, Claude, Gemini, Perplexity, Copilot, Apple). To opt out
+  of model training only, set the `training` group in `src/app/robots.js` to
+  `disallow: "/"`.
+- **llms.txt / llms-full.txt:** generated from the site content (`src/lib/llms.js`).
+- **Open Graph images:** generated per page at `/og/<page>.png`.
+- **Sitemap** with images and last-modified dates, a web manifest, and a
+  permanent redirect from `yantranshvt.com` to `www.yantranshvt.com`.
+
+To finish setup:
+
+1. Add the company's social profile URLs to `company.social` (and any other
+   profiles such as Crunchbase or Clutch to `company.sameAs`) in
+   `src/data/content.json`. They appear in the footer and in the Organization data.
+2. Verify the site in Google Search Console and Bing Webmaster Tools; put the
+   verification tokens in `GOOGLE_SITE_VERIFICATION` / `BING_SITE_VERIFICATION`.
+3. Set `INDEXNOW_KEY`, deploy, then run `npm run indexnow` after each release so
+   Bing (and Copilot/ChatGPT search, which draw on it) re-crawl changed pages.
+
 ## Testing
 
 ```bash
@@ -64,8 +95,8 @@ Set `E2E_BASE_URL` to run the suite against an already running server or a
 deployed environment, for example `E2E_BASE_URL=https://www.yantranshvt.com npm run test:e2e`.
 The suite covers every route (desktop and mobile), navigation, deep links,
 legacy hash redirects, the contact/careers forms, the VoiceIQ demo form and API
-validation, captcha enforcement, resume upload checks, structured data, sitemap,
-robots.txt and llms.txt. Form tests replace the Turnstile widget with a local stub,
+validation, captcha enforcement, resume upload checks, structured data, FAQs,
+metadata, Open Graph images, sitemap, robots.txt and llms.txt. Form tests replace the Turnstile widget with a local stub,
 so they run without network access.
 
 ## Routes
@@ -78,7 +109,9 @@ so they run without network access.
 | `/legal/{disclaimer,privacy-policy,terms-of-use,cookies-policy}` | `app/legal/[slug]` → `site-pages/*.jsx` |
 | `/voiceiq` | `app/voiceiq/page.tsx` → `components/voiceiq/*` |
 | `/api/contact`, `/api/careers`, `/api/send-demo-email` | Form submissions (POST) |
-| `/sitemap.xml`, `/robots.txt`, `/llms.txt` | Generated from the route registry and `content.json` |
+| `/sitemap.xml`, `/robots.txt`, `/llms.txt`, `/llms-full.txt`, `/manifest.webmanifest` | Generated from the route registry and `src/data` |
+| `/og/<page>.png` | Generated Open Graph images |
+| `/indexnow.txt` | IndexNow key (when `INDEXNOW_KEY` is set) |
 
 Old hash links (`/#/industries/telecom`, `/#/privacy-policy`, …) redirect to the
 canonical URLs, and `/industries/bfsi` permanently redirects to `/industries/banking`.
@@ -95,11 +128,15 @@ src/
     home-page.jsx         Homepage sections
     reveal.jsx            Reveal-on-scroll animation helper
     captcha.tsx           Cloudflare Turnstile widget and honeypot field
+    faq-section.jsx       FAQ accordion
     json-ld.jsx           schema.org structured data
     voiceiq/              VoiceIQ product page sections and scoped styles
   site-pages/             Industry/service template and legal pages
-  lib/                    Route registry, link/image helpers, email, captcha, rate limiting
-  data/content.json       Site content (copy, navigation, footer, products)
+  lib/                    Route registry, schema.org data, llms.txt, email, captcha, rate limiting
+scripts/indexnow.mjs      Submits sitemap URLs to IndexNow after a deploy
+  data/content.json       Homepage, footer and product content
+  data/pages.json         Industry, service and legal page copy (incl. SEO titles/descriptions)
+  data/faqs.json          FAQs for the homepage and industry/service pages
   theme.js                Design tokens and shared icons
 public/images/            Images (VoiceIQ assets in public/images/voiceiq)
 tests/e2e/                Playwright end-to-end tests
@@ -107,10 +144,11 @@ tests/e2e/                Playwright end-to-end tests
 
 ## Common changes
 
-- **Edit copy:** update `src/data/content.json`. Industry, service and legal pages,
-  the footer, `llms.txt` and page metadata all read from it.
-- **Add an industry or service page:** add its content under `pages` in
-  `content.json`, then register the slug in `src/lib/site-routes.js`. The sitemap
+- **Edit copy:** homepage, footer and product text live in `src/data/content.json`;
+  industry, service and legal page text lives in `src/data/pages.json`. Page
+  metadata and `llms.txt` are generated from these files.
+- **Add an industry or service page:** add its content to `src/data/pages.json`,
+  then register the slug in `src/lib/site-routes.js`. The sitemap
   and static generation pick it up automatically; add a navigation link in
   `components/site-header.jsx` and a footer link in `content.json`.
 - **Add a product:** create `src/app/<product>/page.*`, keep its styles scoped

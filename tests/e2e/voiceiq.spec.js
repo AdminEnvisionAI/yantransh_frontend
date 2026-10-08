@@ -7,7 +7,7 @@ test.describe("VoiceIQ product page", () => {
       await expect(page.locator(`#${id}`)).toBeAttached();
     }
     const schemas = await page.locator('script[type="application/ld+json"]').allTextContents();
-    const types = schemas.flatMap((s) => [].concat(JSON.parse(s)).map((d) => d["@type"]));
+    const types = schemas.flatMap((s) => { const d = JSON.parse(s); return d["@graph"] || [d]; }).map((d) => d["@type"]);
     expect(types).toEqual(expect.arrayContaining(["Organization", "SoftwareApplication", "FAQPage"]));
   });
 

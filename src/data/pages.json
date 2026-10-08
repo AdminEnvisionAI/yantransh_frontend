@@ -1,0 +1,571 @@
+{
+  "telecom": {
+    "title": "Telecom",
+    "seoTitle": "Telecom Digital Transformation & AI Services",
+    "seoDescription": "YantranshVT helps telecom operators modernize networks and customer experience with the AI@Tele framework, network AI, cloud modernization and GenAI automation.",
+    "category": "Industries",
+    "subtitle": "Accelerating Telecom Excellence",
+    "heroDescription": "In the rapidly evolving telecom sector, staying ahead requires a perfect harmony of operational speed and world-class customer engagement. At Yantransh, we empower service providers to bridge this gap through our proprietary AI@Tele framework. By integrating digital-native engineering with deep industry insights, we help telcos unlock the true power of their network infrastructure.",
+    "image": "telecom-new.png",
+    "introText": "Our approach is designed to deliver measurable impact across four key pillars:",
+    "offerings": [
+      {
+        "title": "Digital Experience Transformation",
+        "description": "Revolutionizing how customers interact with your brand across every digital touchpoint."
+      },
+      {
+        "title": "AI-Driven Network Intelligence",
+        "description": "Leveraging predictive analytics to optimize network performance and reliability."
+      },
+      {
+        "title": "Technology Modernization",
+        "description": "Transitioning legacy systems into agile, cloud-ready architectures built for the future."
+      },
+      {
+        "title": "GenAI-Led Automation",
+        "description": "Deploying cutting-edge generative AI to streamline complex workflows and reduce operational overhead."
+      }
+    ],
+    "ctaText": "Whether it's enhancing connectivity or hyper-personalizing the user journey, we turn technological potential into business reality. We don't just upgrade your systems; we modernize your entire value proposition for a data-driven world.",
+    "ctaButton": "Reach Out Today",
+    "slides": [
+      {
+        "image": "telecom-slide.png",
+        "content": "From services to product we would be happy to help in all."
+      }
+    ]
+  },
+  "banking": {
+    "title": "Banking & Payments",
+    "seoTitle": "Banking & Payments Digital Transformation",
+    "seoDescription": "Digital platforms, data products, automation and hyper-personalization for banks and payment providers, built on secure, scalable infrastructure by YantranshVT.",
+    "category": "Industries",
+    "subtitle": "Modernizing the Future of Banking",
+    "heroDescription": "The banking landscape is undergoing a radical shift, driven by the dual demand for frictionless customer journeys and leaner operational costs. To maintain a competitive edge, financial institutions must master the convergence of business strategy and technological agility. At Yantransh, we facilitate this evolution by focusing on critical strategic pivots.",
+    "image": "banking.jpg",
+    "introText": "We specialize in creating a fully integrated digital ecosystem that empowers your organization to thrive:",
+    "offerings": [
+      {
+        "title": "Digital Platform Acceleration",
+        "description": "We help banks rapidly adopt and scale digital-first platforms that meet the high-speed expectations of modern consumers."
+      },
+      {
+        "title": "Data Products at Scale",
+        "description": "Our approach integrates intelligent data solutions directly into core banking workflows, optimizing everything from the front office to back-end processing."
+      },
+      {
+        "title": "Operational Efficiency",
+        "description": "By automating legacy manual tasks, we significantly reduce the cost-to-serve while improving accuracy and compliance."
+      },
+      {
+        "title": "Hyper-Personalization",
+        "description": "Leveraging deep analytics, we enable banks to deliver tailored financial services that resonate with individual user needs."
+      },
+      {
+        "title": "Resilient Infrastructure",
+        "description": "Our engineering expertise ensures that your digital transformation is built on a secure, scalable, and future-proof foundation."
+      }
+    ],
+    "ctaText": "By bridging the gap between legacy systems and emerging technologies, we turn banking complexity into a streamlined competitive advantage. Let us help you redefine your value proposition and deliver the seamless experiences your customers demand.",
+    "ctaButton": "Get in Touch"
+  },
+  "healthcare": {
+    "title": "Healthcare",
+    "seoTitle": "Healthcare Digital Transformation & AI Solutions",
+    "seoDescription": "Interoperable data, AI care management, workflow automation, patient engagement and AI revenue cycle solutions for healthcare providers and payers.",
+    "category": "Industries",
+    "subtitle": "Transforming Healthcare Through Digital Innovation",
+    "heroDescription": "In a landscape defined by value-based care and evolving regulatory demands, healthcare organizations must embrace digital agility to thrive. At Yantransh, we combine deep clinical insights with advanced technology to bridge the gap between patient needs and operational performance. Our mission is to empower providers and payers to navigate an AI-first world with confidence and precision.",
+    "image": "healthcare.png",
+    "introText": "We provide a comprehensive suite of solutions designed to address the unique challenges of the modern healthcare landscape:",
+    "offerings": [
+      {
+        "title": "Interoperable Data Ecosystems",
+        "description": "Breaking down information silos to ensure seamless data flow across the entire care continuum."
+      },
+      {
+        "title": "AI-Enhanced Care Management",
+        "description": "Utilizing predictive analytics to identify high-risk populations and personalize intervention strategies."
+      },
+      {
+        "title": "Optimized Provider Workflows",
+        "description": "Reducing administrative burden through intelligent automation, allowing clinicians to focus on patient care."
+      },
+      {
+        "title": "Digital Patient Engagement",
+        "description": "Building intuitive platforms that empower patients to take control of their health journeys."
+      },
+      {
+        "title": "Revenue Cycle Excellence",
+        "description": "Leveraging AI to streamline claims processing, reduce denials, and improve financial health."
+      }
+    ],
+    "ctaText": "We transform complex healthcare challenges into sustainable competitive advantages by prioritizing both efficiency and empathy. Our solutions don't just modernize technology; they enhance the quality of life for patients and the professionals who serve them. Partner with Yantransh to build a more connected, data-driven, and resilient healthcare future.",
+    "ctaButton": "Start Your Transformation"
+  },
+  "lifesciences": {
+    "title": "Life Sciences",
+    "seoTitle": "AI-Driven Life Sciences Solutions",
+    "seoDescription": "Clinical trial acceleration, patient-centred platforms, intelligent automation and commercial analytics that take life sciences from discovery to delivery.",
+    "category": "Industries",
+    "subtitle": "Pioneering AI-Driven Life Sciences",
+    "heroDescription": "In an era defined by data, Yantransh empowers Life Sciences organizations to lead through a sophisticated blend of domain mastery and AI innovation. We bridge the gap between complex biological data and actionable intelligence to catalyze scientific and commercial breakthroughs. By integrating cutting-edge AI at every stage of the value chain, we help our partners navigate an increasingly outcomes-focused global ecosystem.",
+    "image": "life-science.png",
+    "introText": "Our solutions are designed to accelerate your journey from discovery to delivery:",
+    "offerings": [
+      {
+        "title": "Clinical Trial Acceleration",
+        "description": "Streamlining study timelines and optimizing site selection through predictive modeling."
+      },
+      {
+        "title": "Patient-Centered Platforms",
+        "description": "Crafting digital experiences that enhance engagement, adherence, and long-term health outcomes."
+      },
+      {
+        "title": "Operational Excellence",
+        "description": "Modernizing legacy processes with intelligent automation to drive significant cost efficiencies."
+      },
+      {
+        "title": "Commercial Growth & Intelligence",
+        "description": "Leveraging market analytics to sharpen competitive positioning and accelerate product adoption."
+      }
+    ],
+    "ctaText": "We transform fragmented data into a sustainable competitive advantage, ensuring your organization makes faster, smarter decisions. At Yantransh, we don't just optimize workflows; we help you redefine what's possible for patient care and business performance. Together, we can accelerate the journey from laboratory discovery to life-changing patient impact.",
+    "ctaButton": "Partner With Us"
+  },
+  "data-ai": {
+    "title": "Data & AI",
+    "seoTitle": "Data & AI Transformation Services",
+    "seoDescription": "AI@Scale strategy, cloud-native data engineering, generative AI and LLM automation, advanced analytics and data governance from YantranshVT.",
+    "category": "Services",
+    "subtitle": "Unlocking Value Through Data & AI Intelligence",
+    "heroDescription": "In the modern enterprise, data is no longer just an asset—it is the engine of competitive differentiation. At Yantransh, we help organizations transition from fragmented data silos to an AI-first mindset, ensuring that every insight leads to a decisive action. Our comprehensive suite of Data and AI services is designed to turn complex information into a scalable business advantage.",
+    "image": "data-ai.png",
+    "introText": "We empower organizations to transcend traditional data barriers and harness the transformative power of artificial intelligence:",
+    "offerings": [
+      {
+        "title": "AI@Scale Strategy",
+        "description": "Implementing robust frameworks that move AI from experimental pilots to core business operations."
+      },
+      {
+        "title": "Modern Data Engineering",
+        "description": "Designing agile, cloud-native data architectures that ensure high-quality, real-time data availability."
+      },
+      {
+        "title": "Generative AI & Automation",
+        "description": "Deploying cutting-edge LLMs and automation tools to revolutionize productivity and creative workflows."
+      },
+      {
+        "title": "Advanced Analytics & Insights",
+        "description": "Leveraging predictive and prescriptive modeling to solve complex business problems and forecast trends."
+      },
+      {
+        "title": "Data Governance & Trust",
+        "description": "Establishing rigorous security and compliance standards to ensure your AI initiatives are ethical and resilient."
+      }
+    ],
+    "ctaText": "By harmonizing deep engineering expertise with industry-specific context, we bridge the gap between raw data and transformative business outcomes. Our approach doesn't just build models; it builds a culture of data-driven excellence. Partner with Yantransh to harness the full power of your information and lead the next wave of industrial innovation.",
+    "ctaButton": "Explore Data & AI Solutions"
+  },
+  "product-engineering": {
+    "title": "Product Engineering",
+    "seoTitle": "Product Engineering Services",
+    "seoDescription": "Agile product development, cloud-native architecture, legacy modernization, UX/UI design and quality engineering in Java, Python and .NET.",
+    "category": "Services",
+    "subtitle": "Engineering the Next Generation of Digital Products",
+    "heroDescription": "In a world where software is the primary driver of business value, velocity and reliability are non-negotiable. At Yantransh, our Product Engineering services help organizations transition from legacy mindsets to digital-native powerhouses. We combine design thinking with disciplined engineering to build scalable, high-performance products that resonate with users and endure in the marketplace.",
+    "image": "product-engineering.png",
+    "introText": "Our product engineering services are built to transform your digital vision into market-leading reality:",
+    "offerings": [
+      {
+        "title": "Agile Product Development",
+        "description": "Accelerating time-to-market through lean methodologies and continuous delivery pipelines."
+      },
+      {
+        "title": "Cloud-Native Architecture",
+        "description": "Building resilient, scalable systems designed to thrive in multi-cloud environments."
+      },
+      {
+        "title": "Modernization & Refactoring",
+        "description": "Transforming monolithic legacy applications into agile, modular service architectures."
+      },
+      {
+        "title": "UX/UI Design Innovation",
+        "description": "Crafting intuitive, human-centric interfaces that drive adoption and customer loyalty."
+      },
+      {
+        "title": "Quality Engineering",
+        "description": "Integrating automated testing and proactive monitoring to ensure uncompromising security and performance."
+      }
+    ],
+    "ctaText": "By bridging the gap between visionary ideas and robust technical execution, we ensure your digital products are built for today and ready for tomorrow. We don't just write code; we engineer competitive advantages that allow your business to scale at the speed of thought. Partner with Yantransh to turn your most ambitious product concepts into reality.",
+    "ctaButton": "Build With Us"
+  },
+  "cloud-infrastructure": {
+    "title": "Cloud & Infrastructure",
+    "seoTitle": "Cloud & Infrastructure Services (AWS & Azure)",
+    "seoDescription": "AWS and Azure migration, cloud-native operations, AI-assisted infrastructure management, Zero Trust security, DevSecOps and FinOps cost optimization.",
+    "category": "Services",
+    "subtitle": "Empowering Business with Resilient Cloud & Infrastructure",
+    "heroDescription": "In today's hyper-connected economy, a robust digital backbone is the prerequisite for innovation and scale. At Yantransh, we help enterprises navigate the complexities of hybrid and multi-cloud environments, ensuring your infrastructure is as agile as your business strategy. Our services bridge the gap between traditional hardware and future-ready, software-defined ecosystems.",
+    "image": "cloud-infrastructure.png",
+    "introText": "We provide end-to-end cloud and infrastructure services that power digital transformation:",
+    "offerings": [
+      {
+        "title": "Cloud Migration & Strategy",
+        "description": "Seamlessly transitioning workloads to the cloud while minimizing downtime and maximizing ROI."
+      },
+      {
+        "title": "Cloud-Native Operations",
+        "description": "Optimizing environments with serverless architectures and containerization for peak efficiency."
+      },
+      {
+        "title": "Next-Gen Infrastructure Management",
+        "description": "Leveraging AI and automation to proactively monitor and manage system health."
+      },
+      {
+        "title": "Cybersecurity & Resilience",
+        "description": "Implementing Zero Trust frameworks and robust recovery protocols to protect your most critical assets."
+      },
+      {
+        "title": "FinOps & Cost Optimization",
+        "description": "Providing granular visibility into cloud spend to ensure every dollar invested drives business value."
+      }
+    ],
+    "ctaText": "By harmonizing security, scalability, and speed, we turn infrastructure from a cost center into a strategic differentiator. Our engineering-first approach ensures your systems are not just stable, but are built to support the next generation of digital breakthroughs. Partner with Yantransh to build a foundation that is secure by design and scalable by demand.",
+    "ctaButton": "Modernize Your Infrastructure"
+  },
+  "talent-solutions": {
+    "title": "Talent Solutions",
+    "seoTitle": "IT Talent Solutions & Staff Augmentation",
+    "seoDescription": "Pre-vetted AI, data, cloud and cybersecurity specialists through staff augmentation, managed services, domain-specific hiring and upskilling.",
+    "category": "Services",
+    "subtitle": "Bridging the Talent Gap with Strategic Expertise",
+    "heroDescription": "In a rapidly shifting technological landscape, the right talent is the ultimate catalyst for innovation. At Yantransh, our Talent Solutions are designed to help organizations overcome the complexities of the modern workforce by connecting them with high-caliber, specialized expertise. We bridge the gap between ambitious business goals and the skilled professionals required to execute them with precision.",
+    "image": "talent-solutions.png",
+    "introText": "Our talent solutions are designed to provide you with the strategic workforce capabilities needed to excel:",
+    "offerings": [
+      {
+        "title": "Niche Technical Expertise",
+        "description": "Accessing a deep pool of specialists in AI, Data Engineering, Cloud, and Cybersecurity."
+      },
+      {
+        "title": "Agile Staff Augmentation",
+        "description": "Quickly scaling your teams with the right skills to meet fluctuating project demands."
+      },
+      {
+        "title": "Strategic Managed Services",
+        "description": "Delivering end-to-end talent management that aligns with your specific operational culture."
+      },
+      {
+        "title": "Domain-Specific Hiring",
+        "description": "Leveraging our deep industry knowledge in Finance, Healthcare, and Telecom to find the perfect fit."
+      },
+      {
+        "title": "Future-Ready Upskilling",
+        "description": "Ensuring your workforce remains competitive through continuous learning and technical evolution."
+      }
+    ],
+    "ctaText": "By harmonizing recruitment speed with quality, we ensure your projects are powered by people who understand both the technology and your business. We don't just fill roles; we build the high-performing teams that drive long-term digital success. Partner with Yantransh to secure the intellectual capital your organization needs to lead in an AI-first world.",
+    "ctaButton": "Find Talent Now"
+  },
+  "privacy-policy": {
+    "title": "Privacy Policy",
+    "seoTitle": "Privacy Policy",
+    "seoDescription": "How YantranshVT collects, uses and protects personal information submitted through yantranshvt.com.",
+    "category": "Legal",
+    "subtitle": "Learning to work in the current world automatically brings with it the responsibility to protect and guide that information and use it judiciously. Since we provide a set of very specific services, our aim is to ensure that your needs are met, while also conserving our integrity and maintaining both, the privacy of our clients and our team. In this regard, there are several important facets to web/app development and marketing on the internet that govern the holistic application of our set up.",
+    "introText": "The purpose of our Privacy Policy is to detail to our clients why we collect the information we do, how we use the said information and to what extent the use of that information is governed by our team’s discretion. We understand that the importance of our work is largely contingent on the specifics of information we gather and so, we hold this information in high regard, ensuring it is known only to the minimal number of people necessary. We also believe that Intellectual Property remains one of the most essential assets in our business, and so our aim is to create a platform where information disclosed to us is both safe and credit worthy as the due may be.",
+    "bullets": [
+      "Our primary use of information is governed by what the client shares with us, in terms of their projected need for IT Services & solutions. This information forms the base of our work.",
+      "Our research checks for any strongly similar content, ensuring that competitive bases are perused sufficiently to ensure that the development of our client’s property is stand alone, unique and correctly used.",
+      "The information base is then used by us to develop and improve the baseline, giving us the relevant details at various junctures.",
+      "We keep logs of your communication with us to ensure there is an ongoing check on how and when we addressed your specific concerns across the development meetings",
+      "We encourage our clients to control and adjust the kind of changes they would like to see on the page and be integral to the development process, because this in turn guides our process of personalizing your ideas.",
+      "With regard to our information technology techniques, we create a stiff upper lip policy. Considering that most information available to us is a matter of competence and determines the kind of products we can create, we have a need-to-know policy on matters of intricate technical development and access is restricted to our team only.",
+      "The information we hold is guarded and retained until the release of the final product, at the end of which, our records are modified to indicate the dates of business and only minimal specifics, making sure our clients are protected against IP Thefts"
+    ],
+    "conclusion": "Keeping all this in mind, we are absolutely certain that our Privacy Policy not only keeps your brainchild entirely in your hands, but also keeps you safe from prying and poking eyes, that are consistently in trying to harangue you and take the next big step for you. We are absolutely secure and set in our understanding of privacy and know that your IP means a lot to you, which is why we take major steps to keep you in the loop and safe."
+  },
+  "disclaimer": {
+    "title": "Disclaimer",
+    "seoTitle": "Disclaimer",
+    "seoDescription": "Terms and limitations that apply to information published on the YantranshVT website.",
+    "category": "Legal",
+    "subtitle": "Please read this disclaimer carefully before using our website or services.",
+    "introText": "By accessing or using this Site, you acknowledge and agree to the terms of this Disclaimer. If you do not agree, please discontinue use immediately.",
+    "sections": [
+      {
+        "num": "1",
+        "title": "General Information",
+        "content": "This website, including all information, tools, services, materials, and resources made available at www.Yantranshinc.com (the “Site”), is operated by Yantransh Inc. and its affiliates (“Yantransh”, “we”, “us”, or “our”)."
+      },
+      {
+        "num": "2",
+        "title": "No Professional Advice",
+        "content": "All materials and information on this Site, including white papers, blogs, webinars, case studies, and other resources, are provided for informational and educational purposes only. They do not constitute and should not be relied upon as legal, financial, medical, technical, or professional advice.\nBefore making any decision or taking any action that may affect your business, finances, health, or personal circumstances, you should consult a qualified professional advisor."
+      },
+      {
+        "num": "3",
+        "title": "Accuracy and Completeness",
+        "content": "While we strive to ensure the accuracy, timeliness, and reliability of information provided on this Site, the content may include errors, inaccuracies, or omissions. The Site and all content are subject to change, update, or removal at any time without notice.\nWe make no guarantees that the information provided is complete, correct, or up to date. Any reliance you place on such information is strictly at your own risk."
+      },
+      {
+        "num": "4",
+        "title": "“As Is” – No Warranties",
+        "content": "This Site and all content, services, and materials available through it are provided on an “as is” and “as available” basis.\nTo the fullest extent permitted by applicable law, Yantransh disclaims all warranties of any kind, express or implied, including but not limited to:\n- Warranties of merchantability, fitness for a particular purpose, and non-infringement;\n- Warranties that the Site will be error-free, secure, uninterrupted, or free of viruses or harmful components;\n- Warranties as to the accuracy, reliability, or completeness of any information provided."
+      },
+      {
+        "num": "5",
+        "title": "Limited License & Intellectual Property",
+        "content": "You are granted a limited, non-exclusive, non-transferable license to access and use this Site for personal, non-commercial purposes only.\nAll content on this Site, including text, graphics, logos, trademarks, service marks, and software, is the property of Yantransh or its licensors and is protected by intellectual property laws. Except as expressly authorized, you may not copy, reproduce, distribute, publish, display, perform, modify, or create derivative works from any content without prior written permission from Yantransh."
+      },
+      {
+        "num": "6",
+        "title": "Third-Party Content & Links",
+        "content": "This Site may contain links to or content from third-party websites, applications, products, or services. These are provided solely for convenience.\nYantransh does not control, endorse, or make any representations or warranties regarding such third-party sites or content, and is not responsible or liable for their availability, accuracy, legality, or practices. Access and use of any third-party content is at your own risk."
+      },
+      {
+        "num": "7",
+        "title": "Use by Minors",
+        "content": "This Site is not intended for use by individuals under the age of 16, or the age of majority in their jurisdiction, whichever is higher. If you are under the required age, please use this Site only with the involvement and consent of a parent or guardian."
+      },
+      {
+        "num": "8",
+        "title": "Limitation of Liability",
+        "content": "To the maximum extent permitted by applicable law, Yantransh, its affiliates, officers, employees, agents, licensors, or suppliers shall not be liable for any direct, indirect, incidental, special, consequential, punitive, or exemplary damages, including but not limited to loss of profits, revenue, goodwill, data, or business opportunities, arising out of or in connection with:\n- Your access to or use of (or inability to use) this Site,\n- Any reliance on content provided herein, or\n- Any linked third-party sites.\nSome jurisdictions do not allow limitations on implied warranties or exclusion of liability for certain damages. In such cases, Yantransh’s liability shall be limited to the greatest extent permitted by law."
+      },
+      {
+        "num": "9",
+        "title": "Governing Law & Jurisdiction",
+        "content": "These Terms shall be governed by, and construed in accordance with, the laws of Republic of India, without regard to its conflict of law principles.\nAny dispute, controversy, or claim arising out of or relating to these Terms, including the validity, invalidity, breach, or termination thereof, shall be subject to the exclusive jurisdiction of the courts located in [Delhi], India."
+      },
+      {
+        "num": "10",
+        "title": "Changes to this Disclaimer",
+        "content": "We may update this Disclaimer from time to time. Please review it periodically to stay informed of any changes."
+      }
+    ]
+  },
+  "cookies-policy": {
+    "title": "Cookies Policy",
+    "seoTitle": "Cookies Policy",
+    "seoDescription": "How YantranshVT uses cookies and similar technologies on yantranshvt.com, and the choices you have.",
+    "category": "Legal",
+    "subtitle": "This Cookies Policy explains how YantranshVT (\"Yantransh,\" \"us,\" or \"our\") uses cookies and similar tracking technologies when you visit our website [www.yantranshvt.com] (the \"Site\"), and your choices regarding these technologies.",
+    "sections": [
+      {
+        "num": "1",
+        "title": "What Are Cookies?",
+        "content": "Cookies are small text files that are stored on your computer or mobile device when you visit a website. They are widely used by website owners to make websites work, or work more efficiently, as well as to provide reporting information and assist with personalization.\n\n• First-party cookies: Set directly by us.\n• Third-party cookies: Set by domains other than ours (e.g., analytics or advertising partners)."
+      },
+      {
+        "num": "2",
+        "title": "How We Use Cookies",
+        "content": "As an IT professional services provider, we use cookies to ensure our website functions securely, to analyze our traffic, to optimize your browsing experience, and to understand how visitors interact with our service offerings, case studies, and insights.\n\nWe use the following types of cookies:",
+        "table": [
+          {
+            "type": "Essential / Strictly Necessary",
+            "desc": "Required for core website functionality, secure log-ins, and network management.",
+            "necessity": "Mandatory (Cannot be disabled)"
+          },
+          {
+            "type": "Performance & Analytics",
+            "desc": "Help us understand how visitors use our site (e.g., which pages are most popular) so we can improve site architecture and content.",
+            "necessity": "Optional"
+          },
+          {
+            "type": "Functional",
+            "desc": "Remember choices you make (such as language preferences or region) to provide enhanced, personalized features.",
+            "necessity": "Optional"
+          },
+          {
+            "type": "Targeting / Advertising",
+            "desc": "Used by third-party networks to deliver relevant advertisements about our IT services across the web and measure campaign effectiveness.",
+            "necessity": "Optional"
+          }
+        ]
+      },
+      {
+        "num": "3",
+        "title": "Detailed Breakdown of Cookies Used",
+        "content": "Below is a detailed list of the specific cookies we utilize on our Site:",
+        "breakdowns": [
+          {
+            "category": "A. Essential Cookies",
+            "items": [
+              {
+                "label": "Name",
+                "value": "__session / XSRF-TOKEN"
+              },
+              {
+                "label": "Provider",
+                "value": "[Company Name]"
+              },
+              {
+                "label": "Purpose",
+                "value": "Used for security verification and maintaining your session state."
+              },
+              {
+                "label": "Duration",
+                "value": "Session"
+              }
+            ]
+          },
+          {
+            "category": "B. Analytics Cookies",
+            "items": [
+              {
+                "label": "Name",
+                "value": "_ga / _gid"
+              },
+              {
+                "label": "Provider",
+                "value": "Google Analytics"
+              },
+              {
+                "label": "Purpose",
+                "value": "Tracks website traffic, user journeys, and engagement metrics to improve our content and user experience."
+              },
+              {
+                "label": "Duration",
+                "value": "Up to 2 years"
+              }
+            ]
+          },
+          {
+            "category": "C. Marketing & Advertising Cookies",
+            "items": [
+              {
+                "label": "Name",
+                "value": "UserMatchHistory / li_sugr"
+              },
+              {
+                "label": "Provider",
+                "value": "LinkedIn / Google Ads"
+              },
+              {
+                "label": "Purpose",
+                "value": "Used to track the effectiveness of our B2B marketing campaigns and serve relevant tech-service advertisements to professionals."
+              },
+              {
+                "label": "Duration",
+                "value": "Various (up to 6 months)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "num": "4",
+        "title": "Your Choices: Managing & Disabling Cookies",
+        "content": "You have the right to decide whether to accept or reject cookies.",
+        "subsections": [
+          {
+            "title": "Cookie Consent Banner",
+            "content": "When you first visit our Site, you will be presented with a cookie consent banner. You can choose to \"Accept All,\" \"Reject Non-Essential,\" or customize your preferences via our Cookie Settings link."
+          },
+          {
+            "title": "Browser Controls",
+            "content": "You can set or amend your web browser controls to accept or refuse cookies. If you choose to reject strictly necessary cookies, you may still use our website, though your access to some functionality and secure areas may be restricted.\n\nTo manage cookies through your browser, follow your browser's instructions (usually located within the \"Help,\" \"Tools,\" or \"Edit\" settings):\n• Google Chrome\n• Microsoft Edge\n• Mozilla Firefox\n• Apple Safari"
+          }
+        ]
+      },
+      {
+        "num": "5",
+        "title": "Other Tracking Technologies",
+        "content": "We may occasionally use similar technologies, like web beacons (sometimes called \"tracking pixels\" or \"clear gifs\") to monitor traffic patterns or see if emails we send have been opened. This helps us gauge the effectiveness of our IT newsletters, whitepapers, and service announcements."
+      },
+      {
+        "num": "6",
+        "title": "Updates to This Policy",
+        "content": "We may update this Cookies Policy from time to time in order to reflect changes to the cookies we use or for other operational, legal, or regulatory reasons. Please re-visit this policy regularly to stay informed about our use of cookies and related technologies."
+      },
+      {
+        "num": "7",
+        "title": "Contact Us",
+        "content": "If you have any questions about our use of cookies or other technologies, please email us at privacy@yantranshvt.com"
+      }
+    ]
+  },
+  "terms-of-use": {
+    "title": "Terms of Use",
+    "seoTitle": "Terms of Use",
+    "seoDescription": "The terms that govern your use of the YantranshVT website and its content.",
+    "category": "Legal",
+    "subtitle": "Welcome to [www.yantranshvt.com] (the “Site”), operated by YantranshVT and its affiliates (“Yantransh”, “we”, “us”, or “our”).",
+    "introText": "These Terms of Use (“Terms”) govern your access to and use of the Site and its content. By using the Site, you agree to be bound by these Terms, our Privacy Policy, Cookies Policy, Disclaimer, and any additional policies referenced herein. If you do not agree, please discontinue use of the Site immediately.",
+    "sections": [
+      {
+        "num": "2",
+        "title": "Eligibility",
+        "content": "You may use this Site only if you:\n• Are at least 18 years old (or the age of majority in your jurisdiction).\n• Have the legal capacity to enter into binding contracts.\n• Agree to comply with all applicable laws and these Terms."
+      },
+      {
+        "num": "3",
+        "title": "Permitted Use",
+        "content": "You may use this Site for:\n• Accessing information about Yantransh’s services and resources.\n• Engaging with thought leadership, blogs, and publications.\n• Contacting us for business inquiries, careers, or support.\n\nAny other use requires our prior written permission."
+      },
+      {
+        "num": "4",
+        "title": "Prohibited Conduct",
+        "content": "You agree not to:\n• Use the Site for unlawful, fraudulent, or harmful purposes.\n• Introduce viruses, malware, or harmful code.\n• Attempt unauthorized access to the Site, servers, or databases.\n• Copy, distribute, or reproduce Site content without authorization.\n• Post or transmit defamatory, offensive, obscene, or misleading content.\n• Interfere with Site security, availability, or performance."
+      },
+      {
+        "num": "5",
+        "title": "Intellectual Property Rights",
+        "content": "• All content on this Site, including text, graphics, software, logos, designs, trademarks, and service marks, is owned by or licensed to Yantransh.\n• You are granted a limited, non-exclusive, non-transferable license to use the Site for personal, non-commercial purposes only.\n• You may not copy, modify, reproduce, republish, distribute, or exploit any part of this Site without prior written consent from Yantransh."
+      },
+      {
+        "num": "6",
+        "title": "User-Generated Content",
+        "content": "If you submit or post any content (“User Content”):\n• You grant Yantransh a worldwide, royalty-free, non-exclusive, perpetual, and transferable license to use, reproduce, display, adapt, and distribute your content.\n• You represent that you own or have the necessary rights to the content.\n• You agree not to post unlawful, infringing, or harmful material.\n• Yantransh reserves the right to review, remove, or moderate any User Content at its discretion.\n\nSee our User-Generated Content & Community Guidelines for details."
+      },
+      {
+        "num": "7",
+        "title": "Third-Party Links",
+        "content": "This Site may contain links to third-party websites or resources. Yantransh is not responsible for the availability, content, or practices of these external sites. Use of third-party links is at your own risk."
+      },
+      {
+        "num": "8",
+        "title": "Privacy & Cookies",
+        "content": "Your use of this Site is also governed by our:\n• Privacy Policy – how we collect and process your personal data.\n• Cookies Policy – how we use cookies and tracking technologies.\n\nBy using the Site, you consent to such collection and use in accordance with those policies."
+      },
+      {
+        "num": "9",
+        "title": "Disclaimer of Warranties",
+        "content": "The Site and its content are provided on an “as is” and “as available” basis.\n\nTo the fullest extent permitted by law:\n• Yantransh disclaims all warranties, express or implied, including warranties of merchantability, fitness for a particular purpose, accuracy, and non-infringement.\n• We do not guarantee that the Site will be error-free, uninterrupted, secure, or free of harmful components."
+      },
+      {
+        "num": "10",
+        "title": "Limitation of Liability",
+        "content": "To the maximum extent permitted by law:\n• Yantransh, its affiliates, officers, employees, and agents shall not be liable for any indirect, incidental, consequential, punitive, or exemplary damages arising out of your use of the Site.\n• Some jurisdictions do not allow exclusion of liability; in such cases, Yantransh’s liability will be limited to the greatest extent permitted by law."
+      },
+      {
+        "num": "11",
+        "title": "Indemnification",
+        "content": "You agree to indemnify, defend, and hold harmless Yantransh and its affiliates, officers, employees, and agents from and against any claims, damages, liabilities, costs, or expenses (including legal fees) arising from:\n• Your use of the Site.\n• Your breach of these Terms.\n• Your violation of third-party rights."
+      },
+      {
+        "num": "12",
+        "title": "Termination of Access",
+        "content": "Yantransh may, at its sole discretion, suspend or terminate your access to the Site without notice if you breach these Terms or engage in prohibited conduct."
+      },
+      {
+        "num": "13",
+        "title": "Governing Law & Jurisdiction",
+        "content": "These Terms shall be governed by, and construed in accordance with, the laws of Republic of India, without regard to its conflict of law principles.\nAny dispute, controversy, or claim arising out of or relating to these Terms, including the validity, invalidity, breach, or termination thereof, shall be subject to the exclusive jurisdiction of the courts located in [Delhi], India."
+      },
+      {
+        "num": "14",
+        "title": "Changes to Terms",
+        "content": "We may update these Terms from time to time. Continued use of the Site after such changes constitutes acceptance of the revised Terms."
+      },
+      {
+        "num": "15",
+        "title": "Contact Us",
+        "content": "For questions or concerns about these Terms, contact us at: privacy@yantranshvt.com"
+      }
+    ]
+  }
+}

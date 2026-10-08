@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { faqs } from "./faqs";
 
 export default function FAQ() {

@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
 import DetailPage from "../../../site-pages/DetailPage";
 import DetailFooter from "../../../components/detail-footer";
-import { getRouteMetadata, serviceRoutes } from "../../../lib/site-routes";
+import JsonLd from "../../../components/json-ld";
+import { detailPageSchema } from "../../../lib/page-schema";
+import { getFaqs, getPage, getRouteMetadata, serviceRoutes } from "../../../lib/site-routes";
 
 export const dynamicParams = false;
 
@@ -22,7 +24,10 @@ export default async function ServicePage({ params }) {
 
   return (
     <>
-      <DetailPage {...route} />
+      <JsonLd data={detailPageSchema({ kind: "service", contentKey: route.contentKey, path: `/services/${slug}` })} />
+      <main>
+        <DetailPage {...route} page={getPage(route.contentKey)} faqs={getFaqs(route.contentKey)} />
+      </main>
       <DetailFooter />
     </>
   );

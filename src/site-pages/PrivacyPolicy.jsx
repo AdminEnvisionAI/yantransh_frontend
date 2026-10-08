@@ -3,14 +3,12 @@
 import Link from "next/link";
 import { T, W } from "../theme";
 import { Rv } from "../components/reveal";
-import contentData from "../data/content.json";
 
 const IC = {
     check: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>,
 };
 
-const PrivacyPolicy = () => {
-    const page = contentData.pages?.["privacy-policy"] || {};
+const PrivacyPolicy = ({ page = {} }) => {
 
     return (
         <div style={{ minHeight: "100vh", background: T.white }}>

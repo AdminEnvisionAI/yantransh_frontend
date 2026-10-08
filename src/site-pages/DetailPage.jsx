@@ -3,22 +3,22 @@
 import Link from "next/link";
 import { T, W, IC } from "../theme";
 import { Rv } from "../components/reveal";
+import FaqSection from "../components/faq-section";
 import { getImage } from "../lib/images";
-import contentData from "../data/content.json";
 
 /**
  * Shared layout for industry and service pages. The per-page options
  * reproduce the small visual differences between the production pages.
  */
 export default function DetailPage({
-  contentKey,
+  page = {},
+  faqs = [],
   fallbackCategory,
   fallbackTitle,
   accent = "white",
   checkColor = "blue",
   ctaDelay = 0.5,
 }) {
-  const page = contentData.pages?.[contentKey] || {};
   const img = getImage(page.image);
   const accentColor = T[accent];
 
@@ -106,6 +106,7 @@ export default function DetailPage({
           </Rv>
         </W>
       </section>
+      <FaqSection faqs={faqs} padding="0 0 80px" />
     </div>
   );
 }

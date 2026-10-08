@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 export default function WhyVoiceIQ() {
   const pillars = [
     {
@@ -327,7 +325,7 @@ export default function WhyVoiceIQ() {
                 </tr>
               </thead>
               <tbody>
-                {comparisonRows.map((row, index) => (
+                {comparisonRows.map((row) => (
                   <tr
                     key={row.dimension}
                     style={{

@@ -1,7 +1,7 @@
 import "server-only";
 
-export const MAX_FIELD = 200;
-export const MAX_MESSAGE = 5000;
+const MAX_FIELD = 200;
+const MAX_MESSAGE = 5000;
 export const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /** Trims a single-line field, strips line breaks (prevents header injection) and caps its length. */

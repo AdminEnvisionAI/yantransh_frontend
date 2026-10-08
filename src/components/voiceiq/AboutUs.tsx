@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function AboutUs() {
   const stats = [
     { value: "1000+", label: "Employees worldwide" },

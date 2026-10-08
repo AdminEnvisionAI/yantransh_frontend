@@ -27,7 +27,7 @@ export default function SiteFooter() {
             <p style={{ fontFamily: T.fn, fontSize: 12, color: "rgba(255,255,255,0.35)", marginTop: 10, lineHeight: 1.6, maxWidth: 200 }}>{contentData.company.tagline}</p>
             <div style={{ display: "flex", gap: 10, marginTop: 14 }}>
               {["linkedin", "twitter"].map((ic) => (
-                <a key={ic} href="#" aria-label={ic === "linkedin" ? "LinkedIn" : "X (Twitter)"} style={{ color: "rgba(255,255,255,0.35)", display: "inline-flex", transition: "color 0.2s" }} onMouseEnter={(e) => { e.currentTarget.style.color = T.white; }} onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(255,255,255,0.35)"; }}><Icon name={ic} size={16} /></a>
+                <a key={ic} href={contentData.company.social?.[ic] || "#"} {...(contentData.company.social?.[ic] ? { target: "_blank", rel: "me noopener noreferrer" } : {})} aria-label={ic === "linkedin" ? "YantranshVT on LinkedIn" : "YantranshVT on X (Twitter)"} style={{ color: "rgba(255,255,255,0.35)", display: "inline-flex", transition: "color 0.2s" }} onMouseEnter={(e) => { e.currentTarget.style.color = T.white; }} onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(255,255,255,0.35)"; }}><Icon name={ic} size={16} /></a>
               ))}
             </div>
           </div>

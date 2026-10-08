@@ -3,10 +3,8 @@
 import Link from "next/link";
 import { T, W } from "../theme";
 import { Rv } from "../components/reveal";
-import contentData from "../data/content.json";
 
-const TermsOfUse = () => {
-    const page = contentData.pages?.["terms-of-use"] || {};
+const TermsOfUse = ({ page = {} }) => {
 
     return (
         <div style={{ minHeight: "100vh", background: T.white }}>

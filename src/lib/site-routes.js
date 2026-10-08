@@ -1,4 +1,5 @@
-import contentData from "../data/content.json";
+import pages from "../data/pages.json";
+import faqs from "../data/faqs.json";
 
 export const SITE_URL = "https://www.yantranshvt.com";
 export const SITE_NAME = "YantranshVT";
@@ -32,21 +33,40 @@ export const legalRoutes = {
 
 export const productRoutes = ["/voiceiq"];
 
+export const getPage = (contentKey) => pages[contentKey] || {};
+export const getFaqs = (key) => faqs[key] || [];
+
+/** Cards for the generated Open Graph images at /og/<key>.png. */
+const OG_CARDS = {
+  home: { eyebrow: "Strategy · Technology · Talent", title: "Turning enterprise strategy into execution with Data, AI, Cloud & Talent" },
+  voiceiq: { eyebrow: "VoiceIQ by YantranshVT", title: "Enterprise AI voice agents that answer every call in under 800 ms" },
+};
+
+export function getOgCard(key) {
+  if (OG_CARDS[key]) return OG_CARDS[key];
+  const page = pages[key];
+  return page ? { eyebrow: page.category || "YantranshVT", title: page.seoTitle || page.title } : null;
+}
+
+export const ogCardKeys = () => [...Object.keys(OG_CARDS), ...Object.keys(pages)];
+
+export const ogImage = (key, alt) => ({ url: `/og/${key}.png`, width: 1200, height: 630, alt });
+
 export function getRouteMetadata(contentKey, pathname) {
-  const page = contentData.pages?.[contentKey];
-  const title = page?.title || SITE_NAME;
-  const description = [page?.seoDescription, page?.heroDescription, page?.subtitle, page?.introText, `${title} delivers strategy, technology, and talent solutions.`]
+  const page = pages[contentKey] || {};
+  const title = page.seoTitle || page.title || SITE_NAME;
+  const description = [page.seoDescription, page.heroDescription, page.subtitle, `${title} from ${SITE_NAME}.`]
     .find(Boolean)
     .replace(/\s+/g, " ")
     .trim()
     .slice(0, 160);
-  const image = page?.image ? `/images/${page.image}` : "/images/logo.png";
+  const image = ogImage(contentKey, title);
 
   return {
     title,
     description,
     alternates: { canonical: pathname },
-    openGraph: { title, description, type: "website", url: pathname, images: [image] },
-    twitter: { card: "summary_large_image", title, description, images: [image] },
+    openGraph: { title: `${title} | ${SITE_NAME}`, description, type: "website", url: pathname, siteName: SITE_NAME, locale: "en_US", images: [image] },
+    twitter: { card: "summary_large_image", title: `${title} | ${SITE_NAME}`, description, images: [image.url] },
   };
 }

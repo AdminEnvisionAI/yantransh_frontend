@@ -1,7 +1,9 @@
 import { notFound, permanentRedirect } from "next/navigation";
 import DetailPage from "../../../site-pages/DetailPage";
 import DetailFooter from "../../../components/detail-footer";
-import { getRouteMetadata, industryAliases, industryRoutes } from "../../../lib/site-routes";
+import JsonLd from "../../../components/json-ld";
+import { detailPageSchema } from "../../../lib/page-schema";
+import { getFaqs, getPage, getRouteMetadata, industryAliases, industryRoutes } from "../../../lib/site-routes";
 
 export const dynamicParams = false;
 
@@ -25,7 +27,10 @@ export default async function IndustryPage({ params }) {
 
   return (
     <>
-      <DetailPage {...route} />
+      <JsonLd data={detailPageSchema({ kind: "industry", contentKey: route.contentKey, path: `/industries/${slug}` })} />
+      <main>
+        <DetailPage {...route} page={getPage(route.contentKey)} faqs={getFaqs(route.contentKey)} />
+      </main>
       <DetailFooter />
     </>
   );

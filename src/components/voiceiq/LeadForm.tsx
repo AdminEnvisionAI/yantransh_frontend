@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import { type FormEvent, useRef, useState } from "react";
 import { Captcha, Honeypot, type CaptchaHandle } from "../captcha";
 
 export default function LeadForm() {
@@ -18,7 +18,7 @@ export default function LeadForm() {
   const [trap, setTrap] = useState("");
   const captcha = useRef<CaptchaHandle>(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!captchaToken) {
       setErrorMessage("Please complete the security check before submitting.");

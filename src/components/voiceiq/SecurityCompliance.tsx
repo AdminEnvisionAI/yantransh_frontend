@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function SecurityCompliance() {
   const certifications = [
     { title: "ISO 27001:2013", desc: "IT security" },

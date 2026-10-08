@@ -8,6 +8,7 @@ import { Captcha, Honeypot } from "./captcha";
 import { getImage } from "../lib/images";
 import { isRouteHref, toHref } from "../lib/links";
 import contentData from "../data/content.json";
+import FaqSection from "./faq-section";
 
 /* ═══════════════ CONTENT ═══════════════ */
 const C = {
@@ -65,7 +66,7 @@ const useHashSectionScroll = () => {
 const Hero = () => {
   const [a, setA] = useState(0);
   const sl = C.heroSlides;
-  useEffect(() => { const t = setInterval(() => setA(p => (p + 1) % sl.length), 5500); return () => clearInterval(t); }, []);
+  useEffect(() => { const t = setInterval(() => setA(p => (p + 1) % sl.length), 5500); return () => clearInterval(t); }, [sl.length]);
   return (
     <section style={{ position: "relative", overflow: "hidden", background: T.navy }}>
       {/* Background image */}
@@ -245,7 +246,7 @@ const Platforms = () => {
 };
 
 /* ═══════════════ METRICS ═══════════════ */
-const CountUp = ({ value, go }) => { const [c, setC] = useState(0); const n = parseInt(value.replace(/[^0-9]/g, "")); const sfx = value.replace(/[0-9]/g, ""); const ok = /^\d+[%+]?$/.test(value); useEffect(() => { if (!go || !ok) return; let i = 0; const s = 1600 / Math.max(n, 1); const t = setInterval(() => { i++; setC(i); if (i >= n) clearInterval(t); }, s); return () => clearInterval(t); }, [go]); return <>{ok ? `${c}${sfx}` : value}</>; };
+const CountUp = ({ value, go }) => { const [c, setC] = useState(0); const n = parseInt(value.replace(/[^0-9]/g, "")); const sfx = value.replace(/[0-9]/g, ""); const ok = /^\d+[%+]?$/.test(value); useEffect(() => { if (!go || !ok) return; let i = 0; const s = 1600 / Math.max(n, 1); const t = setInterval(() => { i++; setC(i); if (i >= n) clearInterval(t); }, s); return () => clearInterval(t); }, [go, n, ok]); return <>{ok ? `${c}${sfx}` : value}</>; };
 const MetricsBar = () => { const [r, v] = useInView(); return (
   <section ref={r} style={{ background: T.navy }}>
     <W style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))" }}>
@@ -732,7 +733,7 @@ const Connect = () => {
   );
 };
 
-export function HomePage() {
+export function HomePage({ faqs = [] }) {
   useHashSectionScroll();
   return (
   <>
@@ -742,6 +743,7 @@ export function HomePage() {
     <Platforms />
     <MetricsBar />
     <Company />
+    <FaqSection faqs={faqs} intro="Quick answers about YantranshVT, our services, platforms and how to work with us." />
     <Connect />
   </>
   );

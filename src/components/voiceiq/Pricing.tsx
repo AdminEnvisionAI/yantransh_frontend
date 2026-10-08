@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 export default function Pricing() {
   const scrollToDemo = () => {
     const el = document.getElementById("demo");

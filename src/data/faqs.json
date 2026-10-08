@@ -1,0 +1,168 @@
+{
+  "home": [
+    {
+      "q": "What does YantranshVT do?",
+      "a": "YantranshVT is a strategy, technology and talent company. It helps enterprises turn strategy into execution through four service lines: Data & AI Transformation, Product Engineering, Cloud & Infrastructure, and Talent Solutions. It also builds AI platforms and products, including the VoiceIQ enterprise AI voice agent."
+    },
+    {
+      "q": "Which industries does YantranshVT serve?",
+      "a": "YantranshVT focuses on four industries: Telecom, Banking & Financial Services (BFSI), Healthcare, and Life Sciences. Each has dedicated solutions, such as the AI@Tele framework for telecom operators."
+    },
+    {
+      "q": "Where is YantranshVT located?",
+      "a": "YantranshVT operates across four continents, with locations in New Jersey (USA), London (UK), Bangalore (India) and Singapore."
+    },
+    {
+      "q": "What AI and data platforms does YantranshVT offer?",
+      "a": "YantranshVT offers three platforms: the Agentic AI Platform for autonomous problem discovery and root-cause analysis, the Data Modernization Suite for accelerating cloud data migration, and the Predictive Analytics Engine for forecasting operational outcomes and tracking ROI."
+    },
+    {
+      "q": "What is VoiceIQ?",
+      "a": "VoiceIQ is YantranshVT's enterprise AI voice agent product. It answers customer calls in real time, runs inside the customer's own infrastructure so data stays in-house, and can hand complex conversations to a human agent."
+    },
+    {
+      "q": "Which technology partners does YantranshVT work with?",
+      "a": "YantranshVT works across leading technology ecosystems including AWS, Microsoft Azure, Snowflake, Databricks, Salesforce, ServiceNow, Kubernetes and Docker."
+    },
+    {
+      "q": "Who leads YantranshVT?",
+      "a": "YantranshVT is led by Madhup Sharma (CEO & Founder), Mahanthesh (Director) and Krishan Pal (VP Engineering)."
+    },
+    {
+      "q": "How can I contact YantranshVT or apply for a job?",
+      "a": "For business enquiries, use the contact form on yantranshvt.com or email Info@yantranshVT.com. For careers, use the careers form, which accepts a resume upload, or email HR@yantranshVT.com."
+    }
+  ],
+  "telecom": [
+    {
+      "q": "What telecom services does YantranshVT provide?",
+      "a": "YantranshVT helps telecom service providers across four pillars: digital experience transformation, AI-driven network intelligence, technology modernization of legacy systems into cloud-ready architectures, and generative-AI-led automation of complex workflows."
+    },
+    {
+      "q": "What is the AI@Tele framework?",
+      "a": "AI@Tele is YantranshVT's proprietary framework for telecom operators. It combines digital-native engineering with telecom industry insight to improve operational speed and customer engagement and to unlock more value from network infrastructure."
+    },
+    {
+      "q": "How does YantranshVT use AI for telecom networks?",
+      "a": "YantranshVT applies predictive analytics to optimize network performance and reliability, and deploys generative AI to streamline workflows and reduce operational overhead."
+    },
+    {
+      "q": "Can YantranshVT modernize legacy telecom systems?",
+      "a": "Yes. YantranshVT transitions legacy telecom systems into agile, cloud-ready architectures as part of its technology modernization services."
+    }
+  ],
+  "banking": [
+    {
+      "q": "What banking and payments services does YantranshVT offer?",
+      "a": "YantranshVT helps banks and financial institutions with digital platform acceleration, data products at scale, operational efficiency through automation, hyper-personalized financial services, and resilient, secure infrastructure."
+    },
+    {
+      "q": "How does YantranshVT reduce cost-to-serve for banks?",
+      "a": "By automating legacy manual tasks, YantranshVT reduces cost-to-serve while improving accuracy and compliance, and it integrates intelligent data solutions into core banking workflows from the front office to back-end processing."
+    },
+    {
+      "q": "Does YantranshVT help banks personalize customer experiences?",
+      "a": "Yes. YantranshVT uses deep analytics to help banks deliver tailored financial services that match individual customer needs."
+    },
+    {
+      "q": "Can YantranshVT work with legacy core banking systems?",
+      "a": "Yes. YantranshVT bridges legacy systems and emerging technologies so that banks can modernize on a secure, scalable and future-proof foundation."
+    }
+  ],
+  "healthcare": [
+    {
+      "q": "What healthcare technology services does YantranshVT provide?",
+      "a": "YantranshVT provides interoperable data ecosystems, AI-enhanced care management, optimized provider workflows, digital patient engagement platforms, and AI-driven revenue cycle management for healthcare providers and payers."
+    },
+    {
+      "q": "How does YantranshVT use AI in healthcare?",
+      "a": "YantranshVT uses predictive analytics to identify high-risk populations and personalize interventions, intelligent automation to reduce clinicians' administrative burden, and AI to streamline claims processing and reduce denials."
+    },
+    {
+      "q": "Does YantranshVT help with healthcare data interoperability?",
+      "a": "Yes. YantranshVT builds interoperable data ecosystems that break down information silos so data flows across the entire care continuum."
+    },
+    {
+      "q": "Who are YantranshVT's healthcare solutions for?",
+      "a": "They are designed for healthcare providers and payers adapting to value-based care and evolving regulatory demands."
+    }
+  ],
+  "lifesciences": [
+    {
+      "q": "What life sciences services does YantranshVT offer?",
+      "a": "YantranshVT offers clinical trial acceleration, patient-centered digital platforms, operational excellence through intelligent automation, and commercial growth and market intelligence for life sciences organizations."
+    },
+    {
+      "q": "How does YantranshVT accelerate clinical trials?",
+      "a": "YantranshVT uses predictive modeling to streamline study timelines and optimize clinical trial site selection."
+    },
+    {
+      "q": "How does YantranshVT use AI in life sciences?",
+      "a": "YantranshVT integrates AI across the life sciences value chain, turning complex biological and commercial data into actionable intelligence, from laboratory discovery to patient impact."
+    }
+  ],
+  "data-ai": [
+    {
+      "q": "What Data & AI services does YantranshVT provide?",
+      "a": "YantranshVT provides AI@Scale strategy, modern cloud-native data engineering, generative AI and automation, advanced predictive and prescriptive analytics, and data governance and trust."
+    },
+    {
+      "q": "How does YantranshVT move AI from pilot to production?",
+      "a": "Through its AI@Scale strategy, YantranshVT implements frameworks that move AI from experimental pilots into core business operations, supported by high-quality, real-time data architectures."
+    },
+    {
+      "q": "Does YantranshVT build generative AI and LLM solutions?",
+      "a": "Yes. YantranshVT deploys large language models and automation tools to improve productivity and creative workflows, and its Agentic AI Platform combines agentic and deterministic workflows with enterprise-grade security."
+    },
+    {
+      "q": "How does YantranshVT handle AI governance?",
+      "a": "YantranshVT establishes security and compliance standards for data and AI so that initiatives are ethical and resilient."
+    }
+  ],
+  "product-engineering": [
+    {
+      "q": "What product engineering services does YantranshVT offer?",
+      "a": "YantranshVT offers agile product development, cloud-native architecture, modernization and refactoring of legacy applications, UX/UI design, and quality engineering with automated testing and monitoring."
+    },
+    {
+      "q": "Which technologies does YantranshVT use for product engineering?",
+      "a": "YantranshVT builds scalable custom applications using Java, Python, .NET and modern frameworks, with an engineering-first culture focused on code quality, security and scalability."
+    },
+    {
+      "q": "Can YantranshVT modernize monolithic applications?",
+      "a": "Yes. YantranshVT transforms monolithic legacy applications into modular service architectures designed for multi-cloud environments."
+    }
+  ],
+  "cloud-infrastructure": [
+    {
+      "q": "What cloud and infrastructure services does YantranshVT provide?",
+      "a": "YantranshVT provides cloud migration and strategy, cloud-native operations with serverless and containers, AI-assisted infrastructure management, cybersecurity and resilience with Zero Trust frameworks, and FinOps cost optimization."
+    },
+    {
+      "q": "Which cloud platforms does YantranshVT support?",
+      "a": "YantranshVT has certified expertise in AWS and Microsoft Azure migration, and works with Kubernetes and Docker for containerized workloads, across hybrid and multi-cloud environments."
+    },
+    {
+      "q": "Does YantranshVT offer managed cloud services and DevSecOps?",
+      "a": "Yes. YantranshVT offers 24/7 managed services and DevSecOps that integrates security into CI/CD pipelines."
+    },
+    {
+      "q": "How does YantranshVT control cloud costs?",
+      "a": "Through FinOps and cost optimization, YantranshVT provides granular visibility into cloud spend so that investment drives business value."
+    }
+  ],
+  "talent-solutions": [
+    {
+      "q": "What talent solutions does YantranshVT offer?",
+      "a": "YantranshVT offers niche technical expertise, agile staff augmentation, strategic managed services, domain-specific hiring, and future-ready upskilling."
+    },
+    {
+      "q": "What kinds of specialists can YantranshVT provide?",
+      "a": "YantranshVT provides pre-vetted specialists including full-stack engineers, cloud architects, data scientists, product managers and cybersecurity experts, with depth in AI, data engineering and cloud."
+    },
+    {
+      "q": "Does YantranshVT hire for specific industries?",
+      "a": "Yes. YantranshVT uses its industry knowledge in finance, healthcare and telecom to find specialists who understand both the technology and the business domain."
+    }
+  ]
+}

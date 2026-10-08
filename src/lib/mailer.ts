@@ -3,7 +3,7 @@ import { escapeHtml, getMailConfig, sendMail } from "./email";
 
 /* VoiceIQ demo-request emails: a confirmation to the requester and a lead alert to the team. */
 
-export interface DemoRequest {
+interface DemoRequest {
   name: string;
   email: string;
   company: string;
