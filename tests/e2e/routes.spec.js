@@ -52,6 +52,12 @@ for (const { path, h1, title } of pages) {
   });
 }
 
+test("Life Sciences hero uses a white label and blue subtitle", async ({ page }) => {
+  await page.goto("/industries/lifesciences");
+  await expect(page.locator("section span").first()).toHaveCSS("color", "rgb(255, 255, 255)");
+  await expect(page.locator("section h2")).toHaveCSS("color", "rgb(13, 71, 161)");
+});
+
 test("unknown routes return the 404 page", async ({ page }) => {
   const response = await page.goto("/does-not-exist");
   expect(response.status()).toBe(404);

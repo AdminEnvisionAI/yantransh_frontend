@@ -16,11 +16,13 @@ export default function DetailPage({
   fallbackCategory,
   fallbackTitle,
   accent = "white",
+  subtitleAccent = accent,
   checkColor = "blue",
   ctaDelay = 0.5,
 }) {
   const img = getImage(page.image);
   const accentColor = T[accent];
+  const subtitleColor = T[subtitleAccent];
 
   return (
     <div style={{ minHeight: "100vh", background: T.white }}>
@@ -37,7 +39,7 @@ export default function DetailPage({
             <h1 style={{ fontFamily: T.fd, fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 700, color: T.white, lineHeight: 1.2, margin: "16px 0 20px" }}>{page.title || fallbackTitle}</h1>
           </Rv>
           <Rv d={0.2}>
-            <h2 style={{ fontFamily: T.fd, fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 600, color: accentColor, marginBottom: 24 }}>{page.subtitle || ""}</h2>
+            <h2 style={{ fontFamily: T.fd, fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 600, color: subtitleColor, marginBottom: 24 }}>{page.subtitle || ""}</h2>
           </Rv>
           <Rv d={0.25}>
             <p style={{ fontFamily: T.fn, fontSize: 16, color: "rgba(255,255,255,0.8)", lineHeight: 1.8, maxWidth: 720 }}>
