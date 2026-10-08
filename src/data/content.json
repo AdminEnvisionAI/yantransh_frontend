@@ -307,7 +307,7 @@
       "img": "telecom-new.png"
     },
     {
-      "id": "bfsi",
+      "id": "banking",
       "sectionLabel": "BFSI",
       "headline": "Future-Ready Finance",
       "description": "Transforming banking, financial services, and insurance through real-time payments, risk AI, and personalized wealth management.",
@@ -509,6 +509,15 @@
           {
             "label": "Contact",
             "href": "/#contact"
+          }
+        ]
+      },
+      {
+        "title": "Products",
+        "links": [
+          {
+            "label": "VoiceIQ",
+            "href": "/voiceiq"
           }
         ]
       }
@@ -1076,5 +1085,14 @@
         }
       ]
     }
-  }
+  },
+  "products": [
+    {
+      "id": "voiceiq",
+      "name": "VoiceIQ",
+      "href": "/voiceiq",
+      "tagline": "Enterprise AI voice agents",
+      "description": "Private, enterprise-grade AI voice agents that answer, qualify and resolve customer calls inside your own infrastructure."
+    }
+  ]
 }
