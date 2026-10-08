@@ -1,0 +1,101 @@
+/*
+ * Global styles for the YantranshVT site. These rules reproduce the
+ * production site's base stylesheet exactly; component styles are inline.
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.dn {
+  display: flex;
+}
+
+.mb {
+  display: none !important;
+}
+
+.fg {
+  grid-template-columns: 1.4fr repeat(4, 1fr);
+}
+
+@media (max-width: 900px) {
+  .form-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .dn {
+    display: none !important;
+  }
+
+  .mb {
+    display: flex !important;
+  }
+
+  .fg {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* Error and 404 pages */
+.status-page {
+  display: grid;
+  min-height: 70vh;
+  align-content: center;
+  justify-items: center;
+  gap: 16px;
+  padding: 140px 24px 80px;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  color: #1e293b;
+}
+
+.status-page__code {
+  color: #0d47a1;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.status-page h1 {
+  color: #0b1d3a;
+  font-family: "Playfair Display", serif;
+}
+
+.status-page a,
+.status-page button {
+  padding: 12px 28px;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  background: #0d47a1;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}

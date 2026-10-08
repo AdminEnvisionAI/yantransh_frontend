@@ -1,0 +1,251 @@
+/*
+ * VoiceIQ product page styles. Every rule is scoped to .viq so the
+ * product page never changes the look of the YantranshVT corporate pages.
+ */
+.viq {
+  --color-primary: #0D47A1;
+  --color-primary-hover: #1976D2;
+  --color-accent: #2196F3;
+  --color-accent-hover: #1976D2;
+  --color-accent-dark: #0D47A1;
+  --color-surface-bg: #FFFFFF;
+  --color-text-main: #1E293B;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --radius-md: 8px;
+  --shadow-md: 0 8px 20px rgba(13, 71, 161, 0.08);
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+
+  width: 100%;
+  overflow-x: hidden;
+  background: var(--color-surface-bg);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.viq section[id] {
+  scroll-margin-top: 84px;
+}
+
+.viq a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+.viq a:hover {
+  color: var(--color-primary-hover);
+}
+
+.viq button,
+.viq input,
+.viq select,
+.viq textarea {
+  font-family: inherit;
+}
+
+/* At least 16px on mobile to prevent iOS Safari auto-zoom */
+.viq input,
+.viq select,
+.viq textarea {
+  font-size: 16px !important;
+}
+
+.viq input:focus,
+.viq select:focus,
+.viq textarea:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+.viq ::selection {
+  background: #E3F2FD;
+  color: #0D47A1;
+}
+
+@keyframes pulse-live {
+  0% { box-shadow: 0 0 0 0 rgba(46, 158, 91, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(46, 158, 91, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(46, 158, 91, 0); }
+}
+
+@keyframes wave-bounce {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
+@keyframes float-ambient {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes viq-spin {
+  to { transform: rotate(360deg); }
+}
+
+.viq .animate-pulse-live {
+  animation: pulse-live 2s infinite;
+}
+
+.viq .animate-float {
+  animation: float-ambient 6s ease-in-out infinite;
+}
+
+.viq .voice-hero {
+  isolation: isolate;
+}
+
+.viq .voice-hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 78% 28%, rgba(33, 150, 243, 0.2), transparent 36%),
+    radial-gradient(ellipse at 16% 100%, rgba(33, 150, 243, 0.12), transparent 38%),
+    repeating-linear-gradient(135deg, transparent 0 46px, rgba(255, 255, 255, 0.025) 47px 48px);
+}
+
+/* Buttons */
+.viq .btn-primary {
+  background: var(--color-accent);
+  color: var(--color-text-main);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.25);
+  touch-action: manipulation;
+}
+
+.viq .btn-primary:hover {
+  background: var(--color-accent-hover);
+  color: #0d1721;
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 16px rgba(33, 150, 243, 0.35);
+}
+
+.viq .btn-primary:active {
+  transform: translateY(0);
+}
+
+.viq .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 13px 22px;
+  border-radius: var(--radius-md);
+  font-size: 15.5px;
+  min-height: 46px;
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  touch-action: manipulation;
+}
+
+.viq .btn-secondary:hover {
+  border-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  transform: translateY(-1.5px);
+}
+
+.viq .btn-outline-primary,
+.viq .btn-outline-rust {
+  text-align: center;
+  border: 1.5px solid var(--color-primary);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 13px;
+  border-radius: var(--radius-md);
+  min-height: 46px;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  touch-action: manipulation;
+}
+
+.viq .btn-outline-rust {
+  border-color: var(--color-accent-dark);
+  color: var(--color-accent-dark);
+}
+
+.viq .btn-outline-primary:hover,
+.viq .btn-outline-rust:hover {
+  background: var(--color-primary);
+  color: #FFFFFF;
+  transform: translateY(-1.5px);
+}
+
+/* Hover cards */
+.viq .interactive-card {
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.viq .interactive-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: #B5C9D8;
+}
+
+.viq .interactive-card-dark:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.viq .table-scroll-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .viq .hero-buttons-container {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .viq .hero-buttons-container > * {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .viq .hero-stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .viq .leadform-inputs-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
