@@ -12,16 +12,16 @@ export const industryRoutes = {
   telecom: { contentKey: "telecom", fallbackCategory: "Industries", fallbackTitle: "Telecom", checkColor: "white", ctaDelay: 0.4 },
   banking: { contentKey: "banking", fallbackCategory: "Industries", fallbackTitle: "Banking & Payments" },
   healthcare: { contentKey: "healthcare", fallbackCategory: "Industries", fallbackTitle: "Healthcare" },
-  lifesciences: { contentKey: "lifesciences", fallbackCategory: "Industries", fallbackTitle: "Life Sciences", accent: "blue", ctaDelay: 0.4 },
+  lifesciences: { contentKey: "lifesciences", fallbackCategory: "Industries", fallbackTitle: "Life Sciences", ctaDelay: 0.4 },
 };
 
 export const industryAliases = { bfsi: "banking" };
 
 export const serviceRoutes = {
   "data-ai": { contentKey: "data-ai", fallbackCategory: "Services", fallbackTitle: "Data & AI" },
-  "product-engineering": { contentKey: "product-engineering", fallbackCategory: "Services", fallbackTitle: "Product Engineering", accent: "blue" },
+  "product-engineering": { contentKey: "product-engineering", fallbackCategory: "Services", fallbackTitle: "Product Engineering" },
   "cloud-infrastructure": { contentKey: "cloud-infrastructure", fallbackCategory: "Services", fallbackTitle: "Cloud & Infrastructure" },
-  "talent-solutions": { contentKey: "talent-solutions", fallbackCategory: "Services", fallbackTitle: "Talent Solutions", accent: "blue" },
+  "talent-solutions": { contentKey: "talent-solutions", fallbackCategory: "Services", fallbackTitle: "Talent Solutions" },
 };
 
 export const legalRoutes = {
