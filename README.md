@@ -19,10 +19,30 @@ npm run dev          # http://localhost:3000
 
 ```bash
 npm run build
-npm start            # serves on port 5173 behind the reverse proxy
+npm start            # listens on $PORT (default 3000)
 ```
 
-Deploy the Next.js build (`.next`) as one Node.js service.
+On your own server, run it behind a reverse proxy, e.g. `PORT=5173 npm start`.
+
+### Hostinger (Node.js web app)
+
+Requires a Business or Cloud plan. In hPanel: **Websites → Add Website → Node.js
+web app → Import Git repository**, then use these settings:
+
+| Setting | Value |
+| --- | --- |
+| Framework preset | Next.js |
+| Branch | `main` (or the branch you deploy from) |
+| Node.js version | 22.x |
+| Build command | `npm run build` |
+| Package manager | npm |
+| Output directory | `.next` |
+| Environment variables | Everything in `.env.example`, with real values |
+
+Hostinger builds with `output: "standalone"` and starts the server itself;
+`next.config.mjs` must stay a plain exported object. Every push to the branch
+redeploys. `NEXT_PUBLIC_TURNSTILE_SITE_KEY` is read at build time, so redeploy
+after changing it.
 
 ## Forms, email and captcha
 

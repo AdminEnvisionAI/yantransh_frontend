@@ -28,7 +28,7 @@ export function getMailConfig() {
     fromEmail,
     contactTo: process.env.CONTACT_EMAIL_TO || "Info@yantranshVT.com",
     careersTo: process.env.CAREERS_EMAIL_TO || "HR@yantranshVT.com",
-    voiceiqTo: process.env.ADMIN_EMAIL || fromEmail,
+    voiceiqTo: process.env.ADMIN_EMAIL || process.env.CONTACT_EMAIL_TO || "Info@yantranshVT.com",
   };
 }
 
